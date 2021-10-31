@@ -3,12 +3,26 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <Copyright>Ivan Connections 2021</Copyright>
+    <PackageIcon>logo_Rogustb.png</PackageIcon>
+    <ApplicationIcon>logo_Rogustb.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="logo_Rogustb.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="F:\Downloads\logo_Rogustb.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Xamarin.CommunityToolkit" Version="1.2.0" />

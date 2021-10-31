@@ -10,27 +10,72 @@ namespace RoGust_Manager
 {
     internal static class Dep
     {
-        internal static bool UploadData2f(string cicluri, string cutii, string mentiuni)
+        internal static string UploadData2f(string cicluri, string peturi, string cutii, string mentiuni)
         {
             try
             {
                 WebClient webClient = new WebClient();
 
-                NameValueCollection formData = new NameValueCollection();
-                formData["cicluri"] = cicluri;
-                formData["cutii"] = cutii;
-                formData["mentiuni"] = mentiuni;
+                NameValueCollection formData = new NameValueCollection
+                {
+                    ["cicluri"] = cicluri,
+                    ["cutii"] = cutii,
+                    ["mentiuni"] = mentiuni,
+                    ["peturi"] = peturi
+                };
 
                 byte[] responseBytes = webClient.UploadValues(Vars.upload2f, "POST", formData);
                 string responsefromserver = Encoding.UTF8.GetString(responseBytes);
-                Console.WriteLine(responsefromserver);
                 webClient.Dispose();
-                return true;
+                return "";
+            }
+            catch(Exception e)
+            {
+                return e.ToString();
+            }
+        }
+
+
+
+        internal static string UploadData3f(string cicluri, string peturi, string cutii, string mentiuni)
+        {
+            try
+            {
+                WebClient webClient = new WebClient();
+
+                NameValueCollection formData = new NameValueCollection
+                {
+                    ["cicluri"] = cicluri,
+                    ["cutii"] = cutii,
+                    ["mentiuni"] = mentiuni,
+                    ["peturi"] = peturi
+                };
+
+                byte[] responseBytes = webClient.UploadValues(Vars.upload3f, "POST", formData);
+                string responsefromserver = Encoding.UTF8.GetString(responseBytes);
+                webClient.Dispose();
+                return "";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
+        }
+
+        internal static string DownloadData()
+        {
+            try
+            {
+                WebClient client = new WebClient();
+                string downloadString = client.DownloadString(Vars.getcurrent);
+                client.Dispose();
+                return downloadString;
             }
             catch
             {
-                return false;
+                return "";
             }
         }
+            
     }
 }

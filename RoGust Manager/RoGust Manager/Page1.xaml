@@ -68,7 +68,7 @@
         </xct:TabViewItem>
 
         <!-- THIRD TAB-->
-        <xct:TabViewItem Text="Fiole" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
+        <xct:TabViewItem x:Name ="FioleTab" Text="Fiole" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White" TabTapped="FioleTab_TabTapped">
             <xct:TabViewItem.Content>
                 <StackLayout>
                     <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
@@ -84,24 +84,24 @@
                         </Grid.RowDefinitions>
                         <Label FontAttributes="Bold" FontSize="21" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Fiole 20.5"/>
                     </Grid>
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
                         <Label  Text="Cicluri: " TextColor="#000" FontSize="28" WidthRequest="110"/>
                         <Button x:Name="minus_ciclu2f" WidthRequest="50" BorderColor="Black"  Text="-" Pressed="minus_ciclu2f_Pressed"/>
-                        <Entry x:Name="cicluri2f_text" Text="0" MaxLength="6" Keyboard="Numeric" TextChanged="Entry_TextChanged" WidthRequest="70" HorizontalTextAlignment="Center"/>
+                        <Entry x:Name="cicluri2f_text" Text="0" MaxLength="6" Keyboard="Numeric" TextChanged="Entry_TextChanged" WidthRequest="70" />
                         <Button x:Name="plus_ciclu2f" WidthRequest="50" BorderColor="Black" Text="+" Pressed="plus_ciclu2f_Pressed"/>
                         <Label x:Name="peturi2f_text" Text="" TextColor="Green" FontSize="28"/>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
                         <Label  Text="Nr cutii:" TextColor="#000" FontSize="28" WidthRequest="110"/>
                         <Button x:Name="minus_cutii2f" WidthRequest="50" BorderColor="Black"  Text="-" Pressed="minus_cutii2f_Pressed"/>
-                        <Entry x:Name="cutii2f_text" Text="0" MaxLength="3" Keyboard="Numeric" WidthRequest="70" HorizontalTextAlignment="Center"/>
+                        <Entry x:Name="cutii2f_text" Text="0" MaxLength="3" Keyboard="Numeric" WidthRequest="70"/>
                         <Button x:Name="plus_cutii2f" WidthRequest="50" BorderColor="Black" Text="+" Pressed="plus_cutii_Pressed"/>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
                         <Label  Text="Mentiuni" TextColor="#000" FontSize="28"/>
                         <Entry x:Name="mentiuni_text2f" Placeholder="Introduceti mentiunile aici"/>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
                         <Button x:Name="save2f" Text="Salveaza" WidthRequest="100" BorderColor="Black" TextColor="#000" Pressed="save2f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
                     </StackLayout>
                     
@@ -112,25 +112,25 @@
                         </Grid.RowDefinitions>
                         <Label FontAttributes="Bold" FontSize="21" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Fiole 30.5"/>
                     </Grid>
-                    <StackLayout Orientation="Horizontal">
-                        <Label  Text="Cicluri: " TextColor="#000" FontSize="28" WidthRequest="110"/>
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                        <Label  Text="Cicluri: " TextColor="#000" FontSize="28" WidthRequest="110" />
                         <Button x:Name="minus_ciclu3f" WidthRequest="50" BorderColor="Black"  Text="-" Pressed="minus_ciclu3f_Pressed"/>
-                        <Entry x:Name="cicluri3f_text" Text="0" MaxLength="5" WidthRequest="70" Keyboard="Numeric"  TextChanged="cicluri3f_text_TextChanged" HorizontalTextAlignment="Center"/>
+                        <Entry x:Name="cicluri3f_text" Text="0" MaxLength="5" WidthRequest="70" Keyboard="Numeric"  TextChanged="cicluri3f_text_TextChanged"/>
                         <Button x:Name="plus_ciclu3f" WidthRequest="50" BorderColor="Black" Text="+" Pressed="plus_ciclu3f_Pressed"/>
                         <Label x:Name="peturi3f_text" Text="" TextColor="Green" FontSize="28"/>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
                         <Label  Text="Nr cutii:" TextColor="#000" FontSize="28" WidthRequest="110"/>
                         <Button x:Name="minus_cutii3f" WidthRequest="50" BorderColor="Black"  Text="-" Pressed="minus_cutii3f_Pressed"/>
-                        <Entry x:Name="cutii3f_text" Text="0" MaxLength="2" Keyboard="Numeric" WidthRequest="70"  HorizontalTextAlignment="Center"/>
+                        <Entry x:Name="cutii3f_text" Text="0" MaxLength="2" Keyboard="Numeric" WidthRequest="70" />
                         <Button x:Name="plus_cutii3f" WidthRequest="50" BorderColor="Black" Text="+" Pressed="plus_cutii3f_Pressed"/>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
                         <Label  Text="Mentiuni" TextColor="#000" FontSize="28"/>
                         <Entry x:Name="mentiuni_text3f" Placeholder="Introduceti mentiunile aici"/>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Button x:Name="save3f" Text="Salveaza" WidthRequest="100" BorderColor="Black" TextColor="#000" Pressed="save2f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                        <Button x:Name="save3f" Text="Salveaza" WidthRequest="100" BorderColor="Black" TextColor="#000" Pressed="save3f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
                     </StackLayout>
                     
                 </StackLayout>
@@ -138,7 +138,7 @@
         </xct:TabViewItem>
 
         <!-- FORTH TAB-->
-        <xct:TabViewItem Icon="logo_Rogustb.png"  BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
+        <xct:TabViewItem Text="Setări"  BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
             <xct:TabViewItem.Content>
                 <StackLayout>
                     <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
