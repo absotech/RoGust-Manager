@@ -49,7 +49,7 @@ namespace RoGust_Manager
 
         private void save2f_Pressed(object sender, EventArgs e)
         {
-            
+            Dep.UploadData2f(cicluri2f_text.Text, cutii2f_text.Text, mentiuni_text2f.Text);
         }
 
         private void minus_ciclu3f_Pressed(object sender, EventArgs e)
