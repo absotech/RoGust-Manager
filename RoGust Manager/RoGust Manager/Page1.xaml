@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="RoGust_Manager.Page1">
+    <xct:TabView TabStripPlacement="Bottom" >
+        
+        <!-- FIRST TAB-->
+        <xct:TabViewItem Text="Conta" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
+            <xct:TabViewItem.Content>
+                <StackLayout>
+                    <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Label FontAttributes="Bold" BackgroundColor="#F44336" FontSize="21" TextColor="#FFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Welcome!"/>
+
+                    </Grid>
+                    <Grid VerticalOptions="FillAndExpand"   HorizontalOptions="FillAndExpand" ColumnSpacing="15" RowSpacing="15" Margin="15" Padding="15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition  Height="*" />
+                            <RowDefinition  Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Grid.Row="0"/>
+                            <ColumnDefinition Grid.Row="1"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Row="0" Grid.Column="0" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand" Text="Never" />
+                        <Button Grid.Row="0" Grid.Column="1" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand" Text="Gonna"/>
+                        <Button Grid.Row="1" Grid.Column="0" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand" Text="Give you"/>
+                        <Button Grid.Row="1" Grid.Column="1" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand" Text="Up"/>
+
+                    </Grid>
+                </StackLayout>
+            </xct:TabViewItem.Content>
+        </xct:TabViewItem>
+
+        <!-- SECOND TAB-->
+        <xct:TabViewItem Text="Stoc" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
+            <xct:TabViewItem.Content>
+                <StackLayout>
+                    <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Label FontAttributes="Bold" BackgroundColor="#F44336" FontSize="21" TextColor="#FFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Welcome!"/>
+
+                    </Grid>
+                    <Grid VerticalOptions="FillAndExpand"   HorizontalOptions="FillAndExpand" ColumnSpacing="15" RowSpacing="15" Margin="15" Padding="15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition  Height="*" />
+                            <RowDefinition  Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Grid.Row="0"/>
+                            <ColumnDefinition Grid.Row="1"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Row="0" Grid.Column="0" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand" Text="Never" />
+                        <Button Grid.Row="0" Grid.Column="1" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand"  Text="Gonna"/>
+                        <Button Grid.Row="1" Grid.Column="0" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand"  Text="Give you"/>
+                        <Button Grid.Row="1" Grid.Column="1" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand"  Text="Up"/>
+
+                    </Grid>
+                </StackLayout>
+            </xct:TabViewItem.Content>
+        </xct:TabViewItem>
+
+        <!-- THIRD TAB-->
+        <xct:TabViewItem Text="Fiole" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
+            <xct:TabViewItem.Content>
+                <StackLayout>
+                    <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Label FontAttributes="Bold" BackgroundColor="#F44336" FontSize="21" TextColor="#FFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Fiole"/>
+                    </Grid>
+                    <!-- 20.5-->
+                    <Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Label FontAttributes="Bold" FontSize="21" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Fiole 20.5"/>
+                    </Grid>
+                    <StackLayout Orientation="Horizontal">
+                        <Label  Text="Cicluri: " TextColor="#000" FontSize="28" WidthRequest="110"/>
+                        <Button x:Name="minus_ciclu2f" WidthRequest="50" BorderColor="Black"  Text="-" Pressed="minus_ciclu2f_Pressed"/>
+                        <Entry x:Name="cicluri2f_text" Text="0" MaxLength="6" Keyboard="Numeric" TextChanged="Entry_TextChanged" WidthRequest="70" HorizontalTextAlignment="Center"/>
+                        <Button x:Name="plus_ciclu2f" WidthRequest="50" BorderColor="Black" Text="+" Pressed="plus_ciclu2f_Pressed"/>
+                        <Label x:Name="peturi2f_text" Text="" TextColor="Green" FontSize="28"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label  Text="Nr cutii:" TextColor="#000" FontSize="28" WidthRequest="110"/>
+                        <Button x:Name="minus_cutii2f" WidthRequest="50" BorderColor="Black"  Text="-" Pressed="minus_cutii2f_Pressed"/>
+                        <Entry x:Name="cutii2f_text" Text="0" MaxLength="3" Keyboard="Numeric" WidthRequest="70" HorizontalTextAlignment="Center"/>
+                        <Button x:Name="plus_cutii2f" WidthRequest="50" BorderColor="Black" Text="+" Pressed="plus_cutii_Pressed"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label  Text="Mentiuni" TextColor="#000" FontSize="28"/>
+                        <Entry x:Name="mentiuni_text2f" Placeholder="Introduceti mentiunile aici"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="save2f" Text="Salveaza" WidthRequest="100" BorderColor="Black" TextColor="#000" Pressed="save2f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    
+                    <!-- 30.5-->
+                    <Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Label FontAttributes="Bold" FontSize="21" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Fiole 30.5"/>
+                    </Grid>
+                    <StackLayout Orientation="Horizontal">
+                        <Label  Text="Cicluri: " TextColor="#000" FontSize="28" WidthRequest="110"/>
+                        <Button x:Name="minus_ciclu3f" WidthRequest="50" BorderColor="Black"  Text="-" Pressed="minus_ciclu3f_Pressed"/>
+                        <Entry x:Name="cicluri3f_text" Text="0" MaxLength="5" WidthRequest="70" Keyboard="Numeric"  TextChanged="cicluri3f_text_TextChanged" HorizontalTextAlignment="Center"/>
+                        <Button x:Name="plus_ciclu3f" WidthRequest="50" BorderColor="Black" Text="+" Pressed="plus_ciclu3f_Pressed"/>
+                        <Label x:Name="peturi3f_text" Text="" TextColor="Green" FontSize="28"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label  Text="Nr cutii:" TextColor="#000" FontSize="28" WidthRequest="110"/>
+                        <Button x:Name="minus_cutii3f" WidthRequest="50" BorderColor="Black"  Text="-" Pressed="minus_cutii3f_Pressed"/>
+                        <Entry x:Name="cutii3f_text" Text="0" MaxLength="2" Keyboard="Numeric" WidthRequest="70"  HorizontalTextAlignment="Center"/>
+                        <Button x:Name="plus_cutii3f" WidthRequest="50" BorderColor="Black" Text="+" Pressed="plus_cutii3f_Pressed"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label  Text="Mentiuni" TextColor="#000" FontSize="28"/>
+                        <Entry x:Name="mentiuni_text3f" Placeholder="Introduceti mentiunile aici"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button x:Name="save3f" Text="Salveaza" WidthRequest="100" BorderColor="Black" TextColor="#000" Pressed="save2f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    
+                </StackLayout>
+            </xct:TabViewItem.Content>
+        </xct:TabViewItem>
+
+        <!-- FORTH TAB-->
+        <xct:TabViewItem Icon="logo_Rogustb.png"  BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
+            <xct:TabViewItem.Content>
+                <StackLayout>
+                    <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Label FontAttributes="Bold" BackgroundColor="#F44336" FontSize="21" TextColor="#FFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Welcome!"/>
+
+                    </Grid>
+                    <Grid VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" ColumnSpacing="15" RowSpacing="15" Margin="15" Padding="15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition  Height="*" />
+                            <RowDefinition  Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Grid.Row="0"/>
+                            <ColumnDefinition Grid.Row="1"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Row="0" Grid.Column="0" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand" Text="Never" />
+                        <Button Grid.Row="0" Grid.Column="1" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand"  Text="Gonna"/>
+                        <Button Grid.Row="1" Grid.Column="0" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand"  Text="Give you"/>
+                        <Button Grid.Row="1" Grid.Column="1" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand"  Text="Up"/>
+
+                    </Grid>
+                </StackLayout>
+            </xct:TabViewItem.Content>
+        </xct:TabViewItem>
+    </xct:TabView>
+
+    
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RoGust_Manager.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="RoGust Manager" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Vă rugăm să vă logați" FontSize="Title" Padding="30,10,30,10" HorizontalOptions="Center"/>
+        <Label Text="Cod:" FontSize="Large" Padding="30,10,30,10" HorizontalOptions="Center"/>
+        <Entry x:Name="login_pwd" IsPassword="True" FontSize="Large" Margin="30,10,30,10" Keyboard="Numeric"/>
+        <Button Text="LOGARE" FontSize="Large" Padding="30,10,30,10" Margin="30,10,30,10" BackgroundColor="#2196F3" TextColor="#FFF" Clicked="Button_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
