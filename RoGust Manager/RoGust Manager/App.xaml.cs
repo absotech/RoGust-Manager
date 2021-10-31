@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.IO;
 
 namespace RoGust_Manager
 {
@@ -10,11 +11,18 @@ namespace RoGust_Manager
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/logged"))
+                MainPage = new NavigationPage(new MainPage());
+            else
+            {
+                MainPage = new NavigationPage(new MainPage());
+                App.Current.MainPage = new Page1();
+            }
         }
 
         protected override void OnStart()
         {
+
         }
 
         protected override void OnSleep()

@@ -10,7 +10,7 @@ namespace RoGust_Manager
 {
     internal static class Dep
     {
-        internal static string UploadData2f(string cicluri, string peturi, string cutii, string mentiuni)
+        internal static string UploadData2f(string cicluri, string peturi, string mentiuni)
         {
             try
             {
@@ -19,7 +19,7 @@ namespace RoGust_Manager
                 NameValueCollection formData = new NameValueCollection
                 {
                     ["cicluri"] = cicluri,
-                    ["cutii"] = cutii,
+                    //["cutii"] = cutii,
                     ["mentiuni"] = mentiuni,
                     ["peturi"] = peturi
                 };
@@ -37,7 +37,7 @@ namespace RoGust_Manager
 
 
 
-        internal static string UploadData3f(string cicluri, string peturi, string cutii, string mentiuni)
+        internal static string UploadData3f(string cicluri, string peturi, string mentiuni)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace RoGust_Manager
                 NameValueCollection formData = new NameValueCollection
                 {
                     ["cicluri"] = cicluri,
-                    ["cutii"] = cutii,
+                    //["cutii"] = cutii,
                     ["mentiuni"] = mentiuni,
                     ["peturi"] = peturi
                 };
@@ -76,6 +76,52 @@ namespace RoGust_Manager
                 return "";
             }
         }
-            
+
+
+        internal static string UploadCutii(string tip, string cutie)
+        {
+            try
+            {
+                WebClient webClient = new WebClient();
+
+                NameValueCollection formData = new NameValueCollection
+                {
+                    ["tip"] = tip,
+                    ["cutii"] = cutie
+                };
+
+                byte[] responseBytes = webClient.UploadValues(Vars.uploadcutie, "POST", formData);
+                string responsefromserver = Encoding.UTF8.GetString(responseBytes);
+                webClient.Dispose();
+                return "";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
+        }
+
+        internal static string DownloadCutii(string tip)
+        {
+            try
+            {
+                WebClient webClient = new WebClient();
+
+                NameValueCollection formData = new NameValueCollection
+                {
+                    ["tip"] = tip
+                };
+
+                byte[] responseBytes = webClient.UploadValues(Vars.getcutii, "POST", formData);
+                string responsefromserver = Encoding.UTF8.GetString(responseBytes);
+                webClient.Dispose();
+                return responsefromserver;
+            }
+            catch (Exception e)
+            {
+                return "";
+            }
+        }
+
     }
 }

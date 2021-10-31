@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="RoGust_Manager.Page1">
-    <xct:TabView TabStripPlacement="Bottom" >
+    <xct:TabView TabStripPlacement="Bottom" IsSwipeEnabled="False">
         
         <!-- FIRST TAB-->
         <xct:TabViewItem Text="Conta" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
@@ -68,7 +68,7 @@
         </xct:TabViewItem>
 
         <!-- THIRD TAB-->
-        <xct:TabViewItem x:Name ="FioleTab" Text="Fiole" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White" TabTapped="FioleTab_TabTapped">
+        <xct:TabViewItem x:Name ="FioleTab" Text="Fiole" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White" TabTapped="FioleTab_TabTapped" >
             <xct:TabViewItem.Content>
                 <StackLayout>
                     <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
