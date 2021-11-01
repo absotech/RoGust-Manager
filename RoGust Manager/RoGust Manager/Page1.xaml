@@ -96,6 +96,7 @@
                         <Button x:Name="minus_cutii2f" WidthRequest="50" BorderColor="Black"  Text="-" Pressed="minus_cutii2f_Pressed"/>
                         <Entry x:Name="cutii2f_text" Text="0" MaxLength="3" Keyboard="Numeric" WidthRequest="70"/>
                         <Button x:Name="plus_cutii2f" WidthRequest="50" BorderColor="Black" Text="+" Pressed="plus_cutii_Pressed"/>
+                        <Button x:Name="save_cutii2f" WidthRequest="70" BorderColor="Black" Text="Fisier" Pressed="save_cutii2f_Pressed"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
                         <Label  Text="Mentiuni" TextColor="#000" FontSize="28"/>
@@ -124,6 +125,7 @@
                         <Button x:Name="minus_cutii3f" WidthRequest="50" BorderColor="Black"  Text="-" Pressed="minus_cutii3f_Pressed"/>
                         <Entry x:Name="cutii3f_text" Text="0" MaxLength="2" Keyboard="Numeric" WidthRequest="70" />
                         <Button x:Name="plus_cutii3f" WidthRequest="50" BorderColor="Black" Text="+" Pressed="plus_cutii3f_Pressed"/>
+                        <Button x:Name="save_cutii3f" WidthRequest="70" BorderColor="Black" Text="Fisier" Pressed="save_cutii3f_Pressed"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
                         <Label  Text="Mentiuni" TextColor="#000" FontSize="28"/>

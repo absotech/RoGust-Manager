@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Essentials;
 using Xamarin.Forms.Xaml;
 
 namespace RoGust_Manager
@@ -49,13 +50,13 @@ namespace RoGust_Manager
 
         private void plus_cutii_Pressed(object sender, EventArgs e)
         {
-            string ex;
+            //string ex;
             if (cutii2f_text.Text.Length > 0)
             {
                 cutii2f_text.Text = (Convert.ToInt32(cutii2f_text.Text) + 1).ToString();
-                ex = Dep.UploadCutii("2", cutii2f_text.Text);
-                if (ex != "")
-                    DisplayAlert("Eroare!", "Nu s-au putut trimite datele!", "OK");
+                //ex = Dep.UploadCutii("2", cutii2f_text.Text);
+                //if (ex != "")
+                //    DisplayAlert("Eroare!", "Nu s-au putut trimite datele!", "OK");
             }
         }
 
@@ -101,13 +102,13 @@ namespace RoGust_Manager
 
         private void plus_cutii3f_Pressed(object sender, EventArgs e)
         {
-            string ex;
+            //string ex;
             if (cutii3f_text.Text.Length > 0)
             {
                 cutii3f_text.Text = (Convert.ToInt32(cutii3f_text.Text) + 1).ToString();
-                ex = Dep.UploadCutii("3", cutii3f_text.Text);
-                if (ex != "")
-                    DisplayAlert("Eroare!", "Nu s-au putut trimite datele!", "OK");
+                //ex = Dep.UploadCutii("3", cutii3f_text.Text);
+                //if (ex != "")
+                //    DisplayAlert("Eroare!", "Nu s-au putut trimite datele!", "OK");
             }
         }
 
@@ -206,6 +207,24 @@ namespace RoGust_Manager
             {
                 DisplayAlert("Eroare!", "Verificați conexiunea la internet!", "OK");
             }
+        }
+
+        private void save_cutii2f_Pressed(object sender, EventArgs e)
+        {
+            Share.RequestAsync(new ShareTextRequest
+            {
+                Text = Dep.DownloadCutii("4"),
+                Title = "Cutii 20.5"
+            });
+        }
+
+        private void save_cutii3f_Pressed(object sender, EventArgs e)
+        {
+            Share.RequestAsync(new ShareTextRequest
+            {
+                Text = Dep.DownloadCutii("6"),
+                Title = "Cutii 30.5"
+            });
         }
     }
 }
