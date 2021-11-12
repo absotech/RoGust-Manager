@@ -101,7 +101,29 @@ namespace RoGust_Manager
             }
         }
 
-        internal static string DownloadCutii(string tip)
+        internal static string SchimbaCutii(string tip)
+        {
+            try
+            {
+                WebClient webClient = new WebClient();
+
+                NameValueCollection formData = new NameValueCollection
+                {
+                    ["tip"] = tip,
+                };
+
+                byte[] responseBytes = webClient.UploadValues(Vars.schimbacutii, "POST", formData);
+                string responsefromserver = Encoding.UTF8.GetString(responseBytes);
+                webClient.Dispose();
+                return "";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
+        }
+
+        internal static string DownloadCutii(string tip, string addr)
         {
             try
             {
@@ -112,7 +134,7 @@ namespace RoGust_Manager
                     ["tip"] = tip
                 };
 
-                byte[] responseBytes = webClient.UploadValues(Vars.getcutii, "POST", formData);
+                byte[] responseBytes = webClient.UploadValues(addr, "POST", formData);
                 string responsefromserver = Encoding.UTF8.GetString(responseBytes);
                 webClient.Dispose();
                 return responsefromserver;

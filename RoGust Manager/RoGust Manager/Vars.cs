@@ -12,5 +12,7 @@ namespace RoGust_Manager
         internal static string getcurrent = "http://ivanconnections.com/data/app/rogust/getcurrent.php";
         internal static string uploadcutie = "http://ivanconnections.com/data/app/rogust/savecutii.php";
         internal static string getcutii = "http://ivanconnections.com/data/app/rogust/getcutii.php";
+        internal static string schimbacutii = "http://ivanconnections.com/data/app/rogust/schimbacutii.php";
+        internal static string fioleshare = "http://ivanconnections.com/data/app/rogust/fioleshare.php";
     }
 }

@@ -156,64 +156,72 @@ namespace RoGust_Manager
             {
                 DisplayAlert("Eroare!", "Verificați conexiunea la internet!", "OK");
             }
-            string resultct2 = Dep.DownloadCutii("2");
-            string[] resultArrayct2 = resultct2.Split('#');
+            string resultct2 = Dep.DownloadCutii("2", Vars.getcutii);
+            //string[] resultArrayct2 = resultct2.Split('#');
+            //if (resultct2 != "")
+            //{
+            //    if (resultArrayct2.Length > 0)
+            //    {
+            //        string split2f = resultArrayct2[0];
+            //        try
+            //        {
+            //            cutii2f_text.Text = split2f.Split(':')[1];
+
+            //        }
+            //        catch
+            //        {
+            //            cutii2f_text.Text = "0";
+            //        }
+            //    }
+            //    else
+            //    {
+            //        DisplayAlert("Eroare fatală!", "Fișierul citit este corupt!", "OK");
+            //    }
+            //}
+            //else
+            //{
+            //    DisplayAlert("Eroare!", "Verificați conexiunea la internet!", "OK");
+            //}
             if (resultct2 != "")
-            {
-                if (resultArrayct2.Length > 0)
-                {
-                    string split2f = resultArrayct2[0];
-                    try
-                    {
-                        cutii2f_text.Text = split2f.Split(':')[1];
-                        
-                    }
-                    catch
-                    {
-                        cutii2f_text.Text = "0";
-                    }
-                }
-                else
-                {
-                    DisplayAlert("Eroare fatală!", "Fișierul citit este corupt!", "OK");
-                }
-            }
+                cutii2f_text.Text = resultct2;
             else
-            {
                 DisplayAlert("Eroare!", "Verificați conexiunea la internet!", "OK");
-            }
-            string resultct3 = Dep.DownloadCutii("3");
-            string[] resultArrayct3 = resultct3.Split('#');
+            string resultct3 = Dep.DownloadCutii("3", Vars.getcutii);
+            //string[] resultArrayct3 = resultct3.Split('#');
+            //if (resultct3 != "")
+            //{
+            //    if (resultArrayct3.Length > 0)
+            //    {
+            //        try
+            //        {
+            //            string split3f = resultArrayct3[0];
+            //            cutii3f_text.Text = split3f.Split(':')[1];
+            //        }
+            //        catch
+            //        {
+            //            cutii3f_text.Text = "0";
+            //        }
+            //    }
+            //    else
+            //    {
+            //        DisplayAlert("Eroare fatală!", "Fișierul citit este corupt!", "OK");
+            //    }
+            //}
+            //else
+            //{
+            //    DisplayAlert("Eroare!", "Verificați conexiunea la internet!", "OK");
+            //}
             if (resultct3 != "")
-            {
-                if (resultArrayct3.Length > 0)
-                {
-                    try
-                    {
-                        string split3f = resultArrayct3[0];
-                        cutii3f_text.Text = split3f.Split(':')[1];
-                    }
-                    catch
-                    {
-                        cutii3f_text.Text = "0";
-                    }
-                }
-                else
-                {
-                    DisplayAlert("Eroare fatală!", "Fișierul citit este corupt!", "OK");
-                }
-            }
+                cutii3f_text.Text = resultct3;
             else
-            {
                 DisplayAlert("Eroare!", "Verificați conexiunea la internet!", "OK");
-            }
         }
 
         private void save_cutii2f_Pressed(object sender, EventArgs e)
         {
             Share.RequestAsync(new ShareTextRequest
             {
-                Text = Dep.DownloadCutii("4"),
+                Text = Dep.DownloadCutii("4", Vars.getcutii),
                 Title = "Cutii 20.5"
             });
         }
@@ -222,8 +230,37 @@ namespace RoGust_Manager
         {
             Share.RequestAsync(new ShareTextRequest
             {
-                Text = Dep.DownloadCutii("6"),
+                Text = Dep.DownloadCutii("6", Vars.getcutii),
                 Title = "Cutii 30.5"
+            });
+        }
+
+        private void schimbacutie2f_Pressed(object sender, EventArgs e)
+        {
+            Dep.SchimbaCutii("2");
+        }
+
+        private void schimbacutie3f_Pressed(object sender, EventArgs e)
+        {
+            Dep.SchimbaCutii("3");
+        }
+
+
+        private void sendcicluri2f_Pressed(object sender, EventArgs e)
+        {
+            Share.RequestAsync(new ShareTextRequest
+            {
+                Text = Dep.DownloadCutii("2", Vars.fioleshare),
+                Title = "Fiole 20.5"
+            });
+        }
+
+        private void sendcicluri3f_Pressed(object sender, EventArgs e)
+        {
+            Share.RequestAsync(new ShareTextRequest
+            {
+                Text = Dep.DownloadCutii("3", Vars.fioleshare),
+                Title = "Fiole 30.5"
             });
         }
     }

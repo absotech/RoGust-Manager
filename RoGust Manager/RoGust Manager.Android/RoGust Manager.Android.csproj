@@ -39,7 +39,7 @@
     <BundleAssemblies>false</BundleAssemblies>
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
     <AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
-    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
     <AndroidKeyStore>false</AndroidKeyStore>
     <AndroidSigningKeyStore>C:\Users\andre\AppData\Local\Xamarin\Mono for Android\Keystore\Ivan\Ivan.keystore</AndroidSigningKeyStore>
     <AndroidSigningStorePass>ABSOhack97</AndroidSigningStorePass>
