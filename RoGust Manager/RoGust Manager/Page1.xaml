@@ -8,31 +8,115 @@
         <!-- FIRST TAB-->
         <xct:TabViewItem Text="Conta" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
             <xct:TabViewItem.Content>
+                <ScrollView>
                 <StackLayout>
                     <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
                         <Grid.RowDefinitions >
                             <RowDefinition Height="50"/>
                         </Grid.RowDefinitions>
                         <Label FontAttributes="Bold" BackgroundColor="#F44336" FontSize="21" TextColor="#FFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Welcome!"/>
-
+    
                     </Grid>
-                    <Grid VerticalOptions="FillAndExpand"   HorizontalOptions="FillAndExpand" ColumnSpacing="15" RowSpacing="15" Margin="15" Padding="15">
-                        <Grid.RowDefinitions>
-                            <RowDefinition  Height="*" />
-                            <RowDefinition  Height="*" />
+                    <Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="50"/>
                         </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Grid.Row="0"/>
-                            <ColumnDefinition Grid.Row="1"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Button Grid.Row="0" Grid.Column="0" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand" Text="Never" />
-                        <Button Grid.Row="0" Grid.Column="1" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand" Text="Gonna"/>
-                        <Button Grid.Row="1" Grid.Column="0" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand" Text="Give you"/>
-                        <Button Grid.Row="1" Grid.Column="1" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand" Text="Up"/>
-
+                        <Label FontAttributes="Bold" FontSize="21" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Conta"/>
                     </Grid>
-                </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                        <Label x:Name="perscrt1_text" Text="1." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                        <Entry x:Name="pers1_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
+                        <Button x:Name="minus_pers1" WidthRequest="40" BorderColor="Black"  Text="-"/>
+                        <Entry x:Name="pers1_nr" Text="0" MaxLength="2" WidthRequest="40" Keyboard="Numeric"/>
+                        <Button x:Name="plus_pers1" WidthRequest="40" BorderColor="Black" Text="+"/>
+                        <ImageButton  x:Name="save_pers1" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
+                    </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                        <Label x:Name="perscrt2_text" Text="2." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                        <Entry x:Name="pers2_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
+                        <Button x:Name="minus_pers2" WidthRequest="40" BorderColor="Black"  Text="-"/>
+                        <Entry x:Name="pers2_nr" Text="0" MaxLength="2" WidthRequest="40" Keyboard="Numeric"/>
+                        <Button x:Name="plus_pers2" WidthRequest="40" BorderColor="Black" Text="+"/>
+                        <ImageButton  x:Name="save_pers2" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                        <Label x:Name="perscrt3_text" Text="3." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                        <Entry x:Name="pers3_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
+                        <Button x:Name="minus_pers3" WidthRequest="40" BorderColor="Black"  Text="-"/>
+                        <Entry x:Name="pers3_nr" Text="0" MaxLength="2" WidthRequest="40" Keyboard="Numeric"/>
+                        <Button x:Name="plus_pers3" WidthRequest="40" BorderColor="Black" Text="+"/>
+                        <ImageButton  x:Name="save_pers3" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                        <Label x:Name="perscrt4_text" Text="4." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                        <Entry x:Name="pers4_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
+                        <Button x:Name="minus_pers4" WidthRequest="40" BorderColor="Black"  Text="-"/>
+                        <Entry x:Name="pers4_nr" Text="0" MaxLength="2" WidthRequest="40" Keyboard="Numeric"/>
+                        <Button x:Name="plus_pers4" WidthRequest="40" BorderColor="Black" Text="+"/>
+                        <ImageButton  x:Name="save_pers4" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
+                    </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label x:Name="perscrt5_text" Text="5." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                            <Entry x:Name="pers5_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
+                            <Button x:Name="minus_pers5" WidthRequest="40" BorderColor="Black"  Text="-"/>
+                            <Entry x:Name="pers5_nr" Text="0" MaxLength="2" WidthRequest="40" Keyboard="Numeric"/>
+                            <Button x:Name="plus_pers5" WidthRequest="40" BorderColor="Black" Text="+"/>
+                            <ImageButton  x:Name="save_pers5" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label x:Name="perscrt6_text" Text="6." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                            <Entry x:Name="pers6_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
+                            <Button x:Name="minus_pers6" WidthRequest="40" BorderColor="Black"  Text="-"/>
+                            <Entry x:Name="pers6_nr" Text="0" MaxLength="2" WidthRequest="40" Keyboard="Numeric"/>
+                            <Button x:Name="plus_pers6" WidthRequest="40" BorderColor="Black" Text="+"/>
+                            <ImageButton  x:Name="save_pers6" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label x:Name="perscrt7_text" Text="7." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                            <Entry x:Name="pers7_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
+                            <Button x:Name="minus_pers7" WidthRequest="40" BorderColor="Black"  Text="-"/>
+                            <Entry x:Name="pers7_nr" Text="0" MaxLength="2" WidthRequest="40" Keyboard="Numeric"/>
+                            <Button x:Name="plus_pers7" WidthRequest="40" BorderColor="Black" Text="+"/>
+                            <ImageButton  x:Name="save_pers7" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label x:Name="perscrt8_text" Text="8." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                            <Entry x:Name="pers8_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
+                            <Button x:Name="minus_pers8" WidthRequest="40" BorderColor="Black"  Text="-"/>
+                            <Entry x:Name="pers8_nr" Text="0" MaxLength="2" WidthRequest="40" Keyboard="Numeric"/>
+                            <Button x:Name="plus_pers8" WidthRequest="40" BorderColor="Black" Text="+"/>
+                            <ImageButton  x:Name="save_pers8" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label x:Name="perscrt9_text" Text="9." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                            <Entry x:Name="pers9_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
+                            <Button x:Name="minus_pers9" WidthRequest="40" BorderColor="Black"  Text="-"/>
+                            <Entry x:Name="pers9_nr" Text="0" MaxLength="2" WidthRequest="40" Keyboard="Numeric"/>
+                            <Button x:Name="plus_pers9" WidthRequest="40" BorderColor="Black" Text="+"/>
+                            <ImageButton x:Name="save_pers9" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label x:Name="perscrt10_text" Text="10." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                            <Entry x:Name="pers10_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
+                            <Button x:Name="minus_pers10" WidthRequest="40" BorderColor="Black"  Text="-"/>
+                            <Entry x:Name="pers10_nr" Text="0" MaxLength="2" WidthRequest="40" Keyboard="Numeric"/>
+                            <Button x:Name="plus_pers10" WidthRequest="40" BorderColor="Black" Text="+"/>
+                            <ImageButton x:Name="save_pers10" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label x:Name="perstotal_text" Text="Total:" WidthRequest="209" FontSize="25" TextColor="#000"/>
+                            <Button x:Name="minus_perstotal" WidthRequest="40" BorderColor="Black"  Text="-"/>
+                            <Entry x:Name="perstotal_nr" Text="0" MaxLength="3" WidthRequest="40" Keyboard="Numeric"/>
+                            <Button x:Name="plus_perstotal" WidthRequest="40" BorderColor="Black" Text="+"/>
+                            <ImageButton x:Name="save_persall" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,10,10,10">
+                            <Button x:Name="save_names" Text="Salvează Nume" WidthRequest="136" BorderColor="Black" TextColor="#000" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+                            <Button x:Name="save_numbers" Text="Salvează Nr" WidthRequest="120" BorderColor="Black" TextColor="#000" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                            <Button x:Name="save_all" Text="Salvează Tot" WidthRequest="123" BorderColor="Black" TextColor="#000" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
             </xct:TabViewItem.Content>
         </xct:TabViewItem>
 
