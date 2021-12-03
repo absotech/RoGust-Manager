@@ -263,5 +263,10 @@ namespace RoGust_Manager
                 Title = "Fiole 30.5"
             });
         }
+
+        private void minus_pers1_Pressed(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
