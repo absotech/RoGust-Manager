@@ -29,7 +29,7 @@ namespace RoGust_Manager
                 webClient.Dispose();
                 return "";
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return e.ToString();
             }
@@ -145,5 +145,30 @@ namespace RoGust_Manager
             }
         }
 
+
+        internal static string GenerareRaport(string week, string tip, string lines)
+        {
+            try
+            {
+                WebClient webClient = new WebClient();
+
+                NameValueCollection formData = new NameValueCollection
+                {
+                    ["week"] = week,
+                    ["tip"] = tip,
+                    ["lines"] = lines
+                };
+
+                byte[] responseBytes = webClient.UploadValues(Vars.genrap, "POST", formData);
+                string responsefromserver = Encoding.UTF8.GetString(responseBytes);
+                webClient.Dispose();
+                return responsefromserver;
+            }
+            catch (Exception e)
+            {
+                return "";
+            }
+
+        }
     }
 }

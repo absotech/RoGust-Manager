@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RoGust_Manager.Loading">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Label FontAttributes="Bold" BackgroundColor="#F44336" FontSize="21" TextColor="#FFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Vă rugăm așteptați"/>
+            </Grid>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                    <Image Source="logo_RogustB.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="250"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" Margin="10,0,0,0" >
+                    <Label  Text="Se încarcă." TextColor="#000" FontSize="40" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                    <Label x:Name="loaded" Text="1%" TextColor="#000" FontSize="30" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Margin="10,20,20,20" VerticalOptions="End">
+                <Label x:Name="curop" Text="Operație curentă:" TextColor="#000" FontSize="20" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

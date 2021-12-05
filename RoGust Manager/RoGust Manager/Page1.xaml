@@ -23,89 +23,89 @@
                         </Grid.RowDefinitions>
                         <Label FontAttributes="Bold" FontSize="21" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Ore suplimentare"/>
                     </Grid>-->
-                    
-                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                        <Label x:Name="perscrt1_text" Text="1." WidthRequest="33" FontSize="24" TextColor="#000"/>
+
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
+                            <Label x:Name="perscrt1_text" Text="1." WidthRequest="33" FontSize="20" TextColor="#000"/>
                         <Entry x:Name="pers1_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
-                        <Button x:Name="minus_pers1" WidthRequest="40" BorderColor="Black"  Text="-" Pressed="minus_pers1_Pressed"/>
+                        <Button x:Name="minus_pers1" WidthRequest="40" BorderColor="Black"  Text="-" Pressed="minus_pers1_Pressed" />
                         <Entry x:Name="pers1_nr" Text="0" MaxLength="4" WidthRequest="42" Keyboard="Numeric"/>
-                        <Button x:Name="plus_pers1" WidthRequest="40" BorderColor="Black" Text="+"/>
+                        <Button x:Name="plus_pers1" WidthRequest="40" BorderColor="Black" Text="+" Pressed="plus_pers1_Pressed"/>
                         <ImageButton  x:Name="save_pers1" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
                     </StackLayout>
-                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                        <Label x:Name="perscrt2_text" Text="2." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
+                        <Label x:Name="perscrt2_text" Text="2." WidthRequest="33" FontSize="20" TextColor="#000"/>
                         <Entry x:Name="pers2_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
                         <Button x:Name="minus_pers2" WidthRequest="40" BorderColor="Black"  Text="-"/>
                         <Entry x:Name="pers2_nr" Text="0" MaxLength="4" WidthRequest="42" Keyboard="Numeric"/>
                         <Button x:Name="plus_pers2" WidthRequest="40" BorderColor="Black" Text="+"/>
                         <ImageButton  x:Name="save_pers2" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                        <Label x:Name="perscrt3_text" Text="3." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
+                        <Label x:Name="perscrt3_text" Text="3." WidthRequest="33" FontSize="20" TextColor="#000"/>
                         <Entry x:Name="pers3_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
                         <Button x:Name="minus_pers3" WidthRequest="40" BorderColor="Black"  Text="-"/>
                         <Entry x:Name="pers3_nr" Text="0" MaxLength="4" WidthRequest="42" Keyboard="Numeric"/>
                         <Button x:Name="plus_pers3" WidthRequest="40" BorderColor="Black" Text="+"/>
                         <ImageButton  x:Name="save_pers3" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                        <Label x:Name="perscrt4_text" Text="4." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
+                        <Label x:Name="perscrt4_text" Text="4." WidthRequest="33" FontSize="20" TextColor="#000"/>
                         <Entry x:Name="pers4_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
                         <Button x:Name="minus_pers4" WidthRequest="40" BorderColor="Black"  Text="-"/>
                         <Entry x:Name="pers4_nr" Text="0" MaxLength="4" WidthRequest="42" Keyboard="Numeric"/>
                         <Button x:Name="plus_pers4" WidthRequest="40" BorderColor="Black" Text="+"/>
                         <ImageButton  x:Name="save_pers4" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
                     </StackLayout>
-                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                            <Label x:Name="perscrt5_text" Text="5." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
+                            <Label x:Name="perscrt5_text" Text="5." WidthRequest="33" FontSize="20" TextColor="#000"/>
                             <Entry x:Name="pers5_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
                             <Button x:Name="minus_pers5" WidthRequest="40" BorderColor="Black"  Text="-"/>
                             <Entry x:Name="pers5_nr" Text="0" MaxLength="4" WidthRequest="42" Keyboard="Numeric"/>
                             <Button x:Name="plus_pers5" WidthRequest="40" BorderColor="Black" Text="+"/>
                             <ImageButton  x:Name="save_pers5" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
                         </StackLayout>
-                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                            <Label x:Name="perscrt6_text" Text="6." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
+                            <Label x:Name="perscrt6_text" Text="6." WidthRequest="33" FontSize="20" TextColor="#000"/>
                             <Entry x:Name="pers6_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
                             <Button x:Name="minus_pers6" WidthRequest="40" BorderColor="Black"  Text="-"/>
                             <Entry x:Name="pers6_nr" Text="0" MaxLength="4" WidthRequest="42" Keyboard="Numeric"/>
                             <Button x:Name="plus_pers6" WidthRequest="40" BorderColor="Black" Text="+"/>
                             <ImageButton  x:Name="save_pers6" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
                         </StackLayout>
-                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                            <Label x:Name="perscrt7_text" Text="7." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
+                            <Label x:Name="perscrt7_text" Text="7." WidthRequest="33" FontSize="20" TextColor="#000"/>
                             <Entry x:Name="pers7_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
                             <Button x:Name="minus_pers7" WidthRequest="40" BorderColor="Black"  Text="-"/>
                             <Entry x:Name="pers7_nr" Text="0" MaxLength="4" WidthRequest="42" Keyboard="Numeric"/>
                             <Button x:Name="plus_pers7" WidthRequest="40" BorderColor="Black" Text="+"/>
                             <ImageButton  x:Name="save_pers7" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
                         </StackLayout>
-                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                            <Label x:Name="perscrt8_text" Text="8." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
+                            <Label x:Name="perscrt8_text" Text="8." WidthRequest="33" FontSize="20" TextColor="#000"/>
                             <Entry x:Name="pers8_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
                             <Button x:Name="minus_pers8" WidthRequest="40" BorderColor="Black"  Text="-"/>
                             <Entry x:Name="pers8_nr" Text="0" MaxLength="4" WidthRequest="42" Keyboard="Numeric"/>
                             <Button x:Name="plus_pers8" WidthRequest="40" BorderColor="Black" Text="+"/>
                             <ImageButton  x:Name="save_pers8" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
                         </StackLayout>
-                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                            <Label x:Name="perscrt9_text" Text="9." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
+                            <Label x:Name="perscrt9_text" Text="9." WidthRequest="33" FontSize="20" TextColor="#000"/>
                             <Entry x:Name="pers9_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
                             <Button x:Name="minus_pers9" WidthRequest="40" BorderColor="Black"  Text="-"/>
                             <Entry x:Name="pers9_nr" Text="0" MaxLength="4" WidthRequest="42" Keyboard="Numeric"/>
                             <Button x:Name="plus_pers9" WidthRequest="40" BorderColor="Black" Text="+"/>
                             <ImageButton x:Name="save_pers9" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
                         </StackLayout>
-                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                            <Label x:Name="perscrt10_text" Text="10." WidthRequest="33" FontSize="24" TextColor="#000"/>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
+                            <Label x:Name="perscrt10_text" Text="10." WidthRequest="33" FontSize="20" TextColor="#000"/>
                             <Entry x:Name="pers10_text" Text="No Value" MaxLength="30" WidthRequest="170" Keyboard="Text"/>
                             <Button x:Name="minus_pers10" WidthRequest="40" BorderColor="Black"  Text="-"/>
                             <Entry x:Name="pers10_nr" Text="0" MaxLength="4" WidthRequest="42" Keyboard="Numeric"/>
                             <Button x:Name="plus_pers10" WidthRequest="40" BorderColor="Black" Text="+"/>
                             <ImageButton x:Name="save_pers10" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
                         </StackLayout>
-                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                            <Label x:Name="perstotal_text" Text="Total:" WidthRequest="209" FontSize="25" TextColor="#000"/>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
+                            <Label x:Name="perstotal_text" Text="Total:" WidthRequest="209" FontSize="20" TextColor="#000"/>
                             <Button x:Name="minus_perstotal" WidthRequest="40" BorderColor="Black"  Text="-"/>
                             <Entry x:Name="perstotal_nr" Text="0" MaxLength="5" WidthRequest="42" Keyboard="Numeric" FontSize="13"/>
                             <Button x:Name="plus_perstotal" WidthRequest="40" BorderColor="Black" Text="+"/>
@@ -155,106 +155,119 @@
         <!-- THIRD TAB-->
         <xct:TabViewItem x:Name ="FioleTab" Text="Fiole" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White" TabTapped="FioleTab_TabTapped" >
             <xct:TabViewItem.Content>
-                <StackLayout>
-                    <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
-                        <Grid.RowDefinitions >
-                            <RowDefinition Height="50"/>
-                        </Grid.RowDefinitions>
-                        <Label FontAttributes="Bold" BackgroundColor="#F44336" FontSize="21" TextColor="#FFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Fiole"/>
-                    </Grid>
-                    <!-- 20.5-->
-                    <Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
-                        <Grid.RowDefinitions >
-                            <RowDefinition Height="50"/>
-                        </Grid.RowDefinitions>
-                        <Label FontAttributes="Bold" FontSize="21" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Fiole 20.5"/>
-                    </Grid>
-                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                        <Label  Text="Cicluri: " TextColor="#000" FontSize="25" WidthRequest="100"/>
-                        <Button x:Name="minus_ciclu2f" WidthRequest="40" BorderColor="Black"  Text="-" Pressed="minus_ciclu2f_Pressed"/>
-                        <Entry x:Name="cicluri2f_text" Text="0" MaxLength="6" Keyboard="Numeric" TextChanged="Entry_TextChanged" WidthRequest="60" />
-                        <Button x:Name="plus_ciclu2f" WidthRequest="40" BorderColor="Black" Text="+" Pressed="plus_ciclu2f_Pressed"/>
-                        <Button x:Name="sendcicluri2f" WidthRequest="65" BorderColor="Black" Text="Fisier" Pressed="sendcicluri2f_Pressed"/>
-                        <Label x:Name="peturi2f_text" Text="" TextColor="Green" FontSize="25"/>
+                <ScrollView>
+                    <StackLayout>
+                        <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
+                            <Grid.RowDefinitions >
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Label FontAttributes="Bold" BackgroundColor="#F44336" FontSize="21" TextColor="#FFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Fiole"/>
+                        </Grid>
+                        <!-- 20.5-->
+                        <Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
+                            <Grid.RowDefinitions >
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Label FontAttributes="Bold" FontSize="21" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Fiole 20.5"/>
+                        </Grid>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label  Text="Cicluri: " TextColor="#000" FontSize="25" WidthRequest="100"/>
+                            <Button x:Name="minus_ciclu2f" WidthRequest="40" BorderColor="Black"  Text="-" Pressed="minus_ciclu2f_Pressed"/>
+                            <Entry x:Name="cicluri2f_text" Text="0" MaxLength="6" Keyboard="Numeric" TextChanged="Entry_TextChanged" WidthRequest="60" />
+                            <Button x:Name="plus_ciclu2f" WidthRequest="40" BorderColor="Black" Text="+" Pressed="plus_ciclu2f_Pressed"/>
+                            <Button x:Name="sendcicluri2f" WidthRequest="65" BorderColor="Black" Text="Fisier" Pressed="sendcicluri2f_Pressed"/>
+                            <Label x:Name="peturi2f_text" Text="" TextColor="Green" FontSize="25"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label  Text="Nr cutii:" TextColor="#000" FontSize="25" WidthRequest="100"/>
+                            <Button x:Name="minus_cutii2f" WidthRequest="40" BorderColor="Black"  Text="-" Pressed="minus_cutii2f_Pressed"/>
+                            <Entry x:Name="cutii2f_text" Text="0" MaxLength="3" Keyboard="Numeric" WidthRequest="60"/>
+                            <Button x:Name="plus_cutii2f" WidthRequest="40" BorderColor="Black" Text="+" Pressed="plus_cutii_Pressed"/>
+                            <Button x:Name="save_cutii2f" WidthRequest="65" BorderColor="Black" Text="Fisier" Pressed="save_cutii2f_Pressed"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label  Text="Mentiuni" TextColor="#000" FontSize="25"/>
+                            <Entry x:Name="mentiuni_text2f" Placeholder="Introduceti mentiunile aici"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Button x:Name="schimbacutie2f" Text="Cutie schimbată" WidthRequest="145" BorderColor="Black" TextColor="#000" Pressed="schimbacutie2f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+                            <Button x:Name="save2f" Text="Salveaza" WidthRequest="100" BorderColor="Black" TextColor="#000" Pressed="save2f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+
+                        <!-- 30.5-->
+                        <Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
+                            <Grid.RowDefinitions >
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Label FontAttributes="Bold" FontSize="21" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Fiole 30.5"/>
+                        </Grid>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label  Text="Cicluri: " TextColor="#000" FontSize="25" WidthRequest="100" />
+                            <Button x:Name="minus_ciclu3f" WidthRequest="40" BorderColor="Black"  Text="-" Pressed="minus_ciclu3f_Pressed"/>
+                            <Entry x:Name="cicluri3f_text" Text="0" MaxLength="5" WidthRequest="60" Keyboard="Numeric"  TextChanged="cicluri3f_text_TextChanged"/>
+                            <Button x:Name="plus_ciclu3f" WidthRequest="40" BorderColor="Black" Text="+" Pressed="plus_ciclu3f_Pressed"/>
+                            <Button x:Name="sendcicluri3f" WidthRequest="65" BorderColor="Black" Text="Fisier" Pressed="sendcicluri3f_Pressed"/>
+                            <Label x:Name="peturi3f_text" Text="" TextColor="Green" FontSize="25"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label  Text="Nr cutii:" TextColor="#000" FontSize="25" WidthRequest="100"/>
+                            <Button x:Name="minus_cutii3f" WidthRequest="40" BorderColor="Black"  Text="-" Pressed="minus_cutii3f_Pressed"/>
+                            <Entry x:Name="cutii3f_text" Text="0" MaxLength="2" Keyboard="Numeric" WidthRequest="60" />
+                            <Button x:Name="plus_cutii3f" WidthRequest="40" BorderColor="Black" Text="+" Pressed="plus_cutii3f_Pressed"/>
+                            <Button x:Name="save_cutii3f" WidthRequest="65" BorderColor="Black" Text="Fisier" Pressed="save_cutii3f_Pressed"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label  Text="Mentiuni" TextColor="#000" FontSize="25"/>
+                            <Entry x:Name="mentiuni_text3f" Placeholder="Introduceti mentiunile aici"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Button x:Name="schimbacutie3f" Text="Cutie schimbată" WidthRequest="145" BorderColor="Black" TextColor="#000" Pressed="schimbacutie3f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+                            <Button x:Name="save3f" Text="Salveaza" WidthRequest="100" BorderColor="Black" TextColor="#000" Pressed="save3f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label  Text="Titlu: Producție PET informativă" TextColor="#000" FontSize="25"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label  Text="Introduceți viteza (frecvența):" TextColor="#000" FontSize="25"/>
+                            <Entry x:Name="ppet" Text="0" MaxLength="4" Keyboard="Numeric" WidthRequest="60" TextChanged="ppet_TextChanged" Focused="ppet_Focused"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                            <Label x:Name="result_ppet" Text="Producție pe oră: " TextColor="#000" FontSize="25"/>
+                            <!--<Label x:Name="result_ppet" TextColor="#000" FontSize="25"/>-->
+                        </StackLayout>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                        <Label  Text="Nr cutii:" TextColor="#000" FontSize="25" WidthRequest="100"/>
-                        <Button x:Name="minus_cutii2f" WidthRequest="40" BorderColor="Black"  Text="-" Pressed="minus_cutii2f_Pressed"/>
-                        <Entry x:Name="cutii2f_text" Text="0" MaxLength="3" Keyboard="Numeric" WidthRequest="60"/>
-                        <Button x:Name="plus_cutii2f" WidthRequest="40" BorderColor="Black" Text="+" Pressed="plus_cutii_Pressed"/>
-                        <Button x:Name="save_cutii2f" WidthRequest="65" BorderColor="Black" Text="Fisier" Pressed="save_cutii2f_Pressed"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                        <Label  Text="Mentiuni" TextColor="#000" FontSize="25"/>
-                        <Entry x:Name="mentiuni_text2f" Placeholder="Introduceti mentiunile aici"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                        <Button x:Name="schimbacutie2f" Text="Cutie schimbată" WidthRequest="145" BorderColor="Black" TextColor="#000" Pressed="schimbacutie2f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
-                        <Button x:Name="save2f" Text="Salveaza" WidthRequest="100" BorderColor="Black" TextColor="#000" Pressed="save2f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                    </StackLayout>
-                    
-                    <!-- 30.5-->
-                    <Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
-                        <Grid.RowDefinitions >
-                            <RowDefinition Height="50"/>
-                        </Grid.RowDefinitions>
-                        <Label FontAttributes="Bold" FontSize="21" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Fiole 30.5"/>
-                    </Grid>
-                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                        <Label  Text="Cicluri: " TextColor="#000" FontSize="25" WidthRequest="100" />
-                        <Button x:Name="minus_ciclu3f" WidthRequest="40" BorderColor="Black"  Text="-" Pressed="minus_ciclu3f_Pressed"/>
-                        <Entry x:Name="cicluri3f_text" Text="0" MaxLength="5" WidthRequest="60" Keyboard="Numeric"  TextChanged="cicluri3f_text_TextChanged"/>
-                        <Button x:Name="plus_ciclu3f" WidthRequest="40" BorderColor="Black" Text="+" Pressed="plus_ciclu3f_Pressed"/>
-                        <Button x:Name="sendcicluri3f" WidthRequest="65" BorderColor="Black" Text="Fisier" Pressed="sendcicluri3f_Pressed"/>
-                        <Label x:Name="peturi3f_text" Text="" TextColor="Green" FontSize="25"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                        <Label  Text="Nr cutii:" TextColor="#000" FontSize="25" WidthRequest="100"/>
-                        <Button x:Name="minus_cutii3f" WidthRequest="40" BorderColor="Black"  Text="-" Pressed="minus_cutii3f_Pressed"/>
-                        <Entry x:Name="cutii3f_text" Text="0" MaxLength="2" Keyboard="Numeric" WidthRequest="60" />
-                        <Button x:Name="plus_cutii3f" WidthRequest="40" BorderColor="Black" Text="+" Pressed="plus_cutii3f_Pressed"/>
-                        <Button x:Name="save_cutii3f" WidthRequest="65" BorderColor="Black" Text="Fisier" Pressed="save_cutii3f_Pressed"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                        <Label  Text="Mentiuni" TextColor="#000" FontSize="25"/>
-                        <Entry x:Name="mentiuni_text3f" Placeholder="Introduceti mentiunile aici"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                        <Button x:Name="schimbacutie3f" Text="Cutie schimbată" WidthRequest="145" BorderColor="Black" TextColor="#000" Pressed="schimbacutie3f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
-                        <Button x:Name="save3f" Text="Salveaza" WidthRequest="100" BorderColor="Black" TextColor="#000" Pressed="save3f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                    </StackLayout>
-                    
-                </StackLayout>
+                </ScrollView>
             </xct:TabViewItem.Content>
         </xct:TabViewItem>
 
         <!-- FORTH TAB-->
-        <xct:TabViewItem Text="Setări"  BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
+        <xct:TabViewItem x:Name="SetariTab" Text="Setări"  BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White" TabTapped="SetariTab_TabTapped">
             <xct:TabViewItem.Content>
                 <StackLayout>
                     <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
                         <Grid.RowDefinitions >
                             <RowDefinition Height="50"/>
                         </Grid.RowDefinitions>
-                        <Label FontAttributes="Bold" BackgroundColor="#F44336" FontSize="21" TextColor="#FFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Welcome!"/>
-
+                        <Label FontAttributes="Bold" BackgroundColor="#F44336" FontSize="21" TextColor="#FFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Setări"/>
                     </Grid>
-                    <Grid VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" ColumnSpacing="15" RowSpacing="15" Margin="15" Padding="15">
-                        <Grid.RowDefinitions>
-                            <RowDefinition  Height="*" />
-                            <RowDefinition  Height="*" />
+                    <Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="25"/>
                         </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Grid.Row="0"/>
-                            <ColumnDefinition Grid.Row="1"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Button Grid.Row="0" Grid.Column="0" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand" Text="Never" />
-                        <Button Grid.Row="0" Grid.Column="1" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand"  Text="Gonna"/>
-                        <Button Grid.Row="1" Grid.Column="0" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand"  Text="Give you"/>
-                        <Button Grid.Row="1" Grid.Column="1" BackgroundColor="#2196F3"  BorderColor="Black" VerticalOptions="FillAndExpand"  Text="Up"/>
-
+                        <Label FontAttributes="Bold" FontSize="20" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Fiole și cutii"/>
                     </Grid>
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                        <Label  Text="Selectați săptămâna:" TextColor="#000" FontSize="20"/>
+                        <Entry x:Name="week_to_generate" Text="0" MaxLength="2" WidthRequest="30" HeightRequest="36" Keyboard="Numeric" FontSize="15"/>
+                        <Label  x:Name="current_week" Text="Săptămâna curentă:" TextColor="#000" FontSize="12" WidthRequest="80"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                        <Button x:Name="generate_report20" BorderColor="Black"  Text="Generare raport 20.5" HorizontalOptions="StartAndExpand" Pressed="generate_report20_Pressed"/>
+                        <Button x:Name="generate_report30" BorderColor="Black"  Text="Generare raport 30.5" HorizontalOptions="EndAndExpand" Pressed="generate_report30_Pressed"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                        <Button x:Name="generate_report" BorderColor="Black"  Text="Generare raport" IsEnabled="False" HorizontalOptions="CenterAndExpand" Pressed="generate_report_Pressed"/>
+                    </StackLayout>
                 </StackLayout>
             </xct:TabViewItem.Content>
         </xct:TabViewItem>

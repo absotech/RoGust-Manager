@@ -16,7 +16,7 @@ namespace RoGust_Manager
             else
             {
                 MainPage = new NavigationPage(new MainPage());
-                App.Current.MainPage = new Page1();
+                App.Current.MainPage = new Loading();
             }
         }
 
@@ -27,10 +27,12 @@ namespace RoGust_Manager
 
         protected override void OnSleep()
         {
+
         }
 
         protected override void OnResume()
         {
+
         }
     }
 }

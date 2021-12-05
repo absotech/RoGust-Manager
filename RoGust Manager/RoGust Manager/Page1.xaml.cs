@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+using System.IO;
+using System.Globalization;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 namespace RoGust_Manager
 {
@@ -18,9 +16,50 @@ namespace RoGust_Manager
             InitializeComponent();
         }
 
+        public int GetWeekNumber()
+        {
+            CultureInfo ciCurr = CultureInfo.CurrentCulture;
+            int weekNum = ciCurr.Calendar.GetWeekOfYear(DateTime.Now, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+            return weekNum;
+        }
+
+        #region -FIRST PAGE-
+        //FIRST PAGE
+        //entry no.1
+        private void minus_pers1_Pressed(object sender, EventArgs e)
+        {
+            pers1_nr.Text = (Convert.ToDouble(pers1_nr.Text) - 0.5).ToString();
+        }
+        private void plus_pers1_Pressed(object sender, EventArgs e)
+        {
+            pers1_nr.Text = (Convert.ToDouble(pers1_nr.Text) + 0.5).ToString();
+        }
+
+
+        //entry no.2
+        #endregion
+
+
+
+
+
+
+
+
+        //SECOND PAGE
+        
+
+
+
+
+
+
+        #region -THIRD PAGE-
+
+        //THIRD PAGE
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if(cicluri2f_text.Text.Length > 0)
+            if (cicluri2f_text.Text.Length > 0)
                 peturi2f_text.Text = (Convert.ToInt32(cicluri2f_text.Text) * 2).ToString();
         }
 
@@ -64,16 +103,16 @@ namespace RoGust_Manager
         {
             string ex;
             ex = Dep.UploadData2f(cicluri2f_text.Text, peturi2f_text.Text, mentiuni_text2f.Text);
-            if ( ex == "")
+            if (ex == "")
                 DisplayAlert("Succes!", "Trimis către server!", "OK");
             else
-                DisplayAlert("Eroare!", "Nu s-au putut trimite datele!" , "OK");
+                DisplayAlert("Eroare!", "Nu s-au putut trimite datele!", "OK");
         }
 
         private void minus_ciclu3f_Pressed(object sender, EventArgs e)
         {
             if (cicluri3f_text.Text.Length > 0 && Convert.ToInt32(cicluri3f_text.Text) >= 0)
-                cicluri3f_text.Text = (Convert.ToInt32(cicluri3f_text.Text) - 1).ToString(); 
+                cicluri3f_text.Text = (Convert.ToInt32(cicluri3f_text.Text) - 1).ToString();
         }
 
         private void cicluri3f_text_TextChanged(object sender, TextChangedEventArgs e)
@@ -124,97 +163,13 @@ namespace RoGust_Manager
 
         private void FioleTab_TabTapped(object sender, Xamarin.CommunityToolkit.UI.Views.TabTappedEventArgs e)
         {
-            string result = Dep.DownloadData();
-            string[] resultArray = result.Split('#');
-            if (result != "")
-            {
-                if (resultArray.Length > 0)
-                {
-                    try
-                    {
-                        string split2f = resultArray[0];
-                        string split3f = resultArray[1];
-                        cicluri2f_text.Text = split2f.Split('^')[0];
-                        mentiuni_text2f.Text = split2f.Split('^')[2];
-                        cicluri3f_text.Text = split3f.Split('^')[0];
-                        mentiuni_text3f.Text = split3f.Split('^')[2];
-                    }
-                    catch
-                    {
-                        cicluri2f_text.Text = "0";
-                        mentiuni_text2f.Text = "0";
-                        cicluri3f_text.Text = "0";
-                        mentiuni_text3f.Text = "0";
-                    }
-                }
-                else
-                {
-                    DisplayAlert("Eroare fatală!", "Fișierul citit este corupt!", "OK");
-                }
-            }
-            else
-            {
-                DisplayAlert("Eroare!", "Verificați conexiunea la internet!", "OK");
-            }
-            string resultct2 = Dep.DownloadCutii("2", Vars.getcutii);
-            //string[] resultArrayct2 = resultct2.Split('#');
-            //if (resultct2 != "")
-            //{
-            //    if (resultArrayct2.Length > 0)
-            //    {
-            //        string split2f = resultArrayct2[0];
-            //        try
-            //        {
-            //            cutii2f_text.Text = split2f.Split(':')[1];
-
-            //        }
-            //        catch
-            //        {
-            //            cutii2f_text.Text = "0";
-            //        }
-            //    }
-            //    else
-            //    {
-            //        DisplayAlert("Eroare fatală!", "Fișierul citit este corupt!", "OK");
-            //    }
-            //}
-            //else
-            //{
-            //    DisplayAlert("Eroare!", "Verificați conexiunea la internet!", "OK");
-            //}
-            if (resultct2 != "")
-                cutii2f_text.Text = resultct2;
-            else
-                DisplayAlert("Eroare!", "Verificați conexiunea la internet!", "OK");
-            string resultct3 = Dep.DownloadCutii("3", Vars.getcutii);
-            //string[] resultArrayct3 = resultct3.Split('#');
-            //if (resultct3 != "")
-            //{
-            //    if (resultArrayct3.Length > 0)
-            //    {
-            //        try
-            //        {
-            //            string split3f = resultArrayct3[0];
-            //            cutii3f_text.Text = split3f.Split(':')[1];
-            //        }
-            //        catch
-            //        {
-            //            cutii3f_text.Text = "0";
-            //        }
-            //    }
-            //    else
-            //    {
-            //        DisplayAlert("Eroare fatală!", "Fișierul citit este corupt!", "OK");
-            //    }
-            //}
-            //else
-            //{
-            //    DisplayAlert("Eroare!", "Verificați conexiunea la internet!", "OK");
-            //}
-            if (resultct3 != "")
-                cutii3f_text.Text = resultct3;
-            else
-                DisplayAlert("Eroare!", "Verificați conexiunea la internet!", "OK");
+          
+            cicluri2f_text.Text = Vars.ciclu2f;
+            mentiuni_text2f.Text = Vars.mentiuni2f;
+            cicluri3f_text.Text = Vars.ciclu3f;
+            mentiuni_text3f.Text = Vars.mentiuni3f;
+            cutii2f_text.Text = Vars.cutii2f;
+            cutii3f_text.Text = Vars.cutii3f;
         }
 
         private void save_cutii2f_Pressed(object sender, EventArgs e)
@@ -237,11 +192,31 @@ namespace RoGust_Manager
 
         private void schimbacutie2f_Pressed(object sender, EventArgs e)
         {
+            string file = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/changed" + GetWeekNumber().ToString() + "2f";
+            if (!File.Exists(file))
+            {
+                File.WriteAllText(file, "1");
+            }
+            else
+            {
+                string nrch = File.ReadAllText(file);
+                File.WriteAllText(file, (Convert.ToInt32(nrch)+1).ToString() );
+            }
             Dep.SchimbaCutii("2");
         }
 
         private void schimbacutie3f_Pressed(object sender, EventArgs e)
         {
+            string file = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/changed" + GetWeekNumber().ToString() + "3f";
+            if (!File.Exists(file))
+            {
+                File.WriteAllText(file, "1");
+            }
+            else
+            {
+                string nrch = File.ReadAllText(file);
+                File.WriteAllText(file, (Convert.ToInt32(nrch) + 1).ToString());
+            }
             Dep.SchimbaCutii("3");
         }
 
@@ -264,9 +239,95 @@ namespace RoGust_Manager
             });
         }
 
-        private void minus_pers1_Pressed(object sender, EventArgs e)
+
+        private void ppet_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+            if (ppet.Text.Length == 3)
+            {
+                int a, b, c, d;
+                a = Convert.ToInt32(ppet.Text) / 100;
+                b = Convert.ToInt32(ppet.Text) / 10 % 10;
+                c = Convert.ToInt32(ppet.Text) % 10;
+                string strimg;
+                strimg = a.ToString() + b.ToString() + "." + c.ToString();
+                ppet.Text = a.ToString() + b.ToString() + "." + c.ToString();
+                double asd;
+                Double.TryParse(strimg, out asd);
+                result_ppet.Text ="Producție pe oră: " + Math.Round(asd*194/40.5*5, 2).ToString();
+                
+            }
         }
+
+        private void ppet_Focused(object sender, FocusEventArgs e)
+        {
+            ppet.Text = "";
+        }
+
+        #endregion
+
+
+        //FORTH PAGE
+
+        private void SetariTab_TabTapped(object sender, Xamarin.CommunityToolkit.UI.Views.TabTappedEventArgs e)
+        {
+            current_week.Text = "Săptămâna curentă:" +GetWeekNumber().ToString();
+            week_to_generate.Text = GetWeekNumber().ToString();
+        }
+
+        private void generate_report20_Pressed(object sender, EventArgs e)
+        {
+            string rap;
+            string file = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/changed" + GetWeekNumber().ToString() + "2f";
+            if (File.Exists(file))
+            {
+                rap = Dep.GenerareRaport(week_to_generate.Text.ToString(), "2", File.ReadAllText(file));
+            }
+            else
+            {
+                rap = Dep.GenerareRaport(week_to_generate.Text.ToString(), "2", "0");
+            }
+            
+            Share.RequestAsync(new ShareTextRequest
+            {
+                Text = rap,
+                Title = "Raport 20.5"
+            });
+
+        }
+
+        private void generate_report30_Pressed(object sender, EventArgs e)
+        {
+            string rap;
+            string file = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/changed" + GetWeekNumber().ToString() + "3f";
+            if (File.Exists(file))
+            {
+                rap = Dep.GenerareRaport(week_to_generate.Text.ToString(), "3", File.ReadAllText(file));
+            }
+            else
+            {
+                rap = Dep.GenerareRaport(week_to_generate.Text.ToString(), "3", "0");
+            }
+
+            Share.RequestAsync(new ShareTextRequest
+            {
+                Text = rap,
+                Title = "Raport 30.5"
+            });
+        }
+
+        private void generate_report_Pressed(object sender, EventArgs e)
+        {
+            string file = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/changed" + GetWeekNumber().ToString() + "2f";
+            if (File.Exists(file))
+            {
+                Dep.GenerareRaport(week_to_generate.Text.ToString(), "1", File.ReadAllText(file));
+            }
+            else
+            {
+                Dep.GenerareRaport(week_to_generate.Text.ToString(), "1", "0");
+            }
+        }
+
+
     }
 }

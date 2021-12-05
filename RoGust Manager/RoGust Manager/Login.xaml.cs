@@ -21,7 +21,7 @@ namespace RoGust_Manager
             if (login_pwd.Text == Vars.Code)
             {
                 File.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/logged", "");
-                App.Current.MainPage = new Page1();
+                App.Current.MainPage = new Loading();
             }
             else
             {
