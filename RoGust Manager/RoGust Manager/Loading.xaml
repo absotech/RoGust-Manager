@@ -15,7 +15,7 @@
                     <Image Source="logo_RogustB.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="250"/>
                 </StackLayout>
                 <StackLayout Orientation="Vertical" Margin="10,0,0,0" >
-                    <Label  Text="Se încarcă." TextColor="#000" FontSize="40" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                    <Label x:Name="loading_dot" Text="Se încarcă." TextColor="#000" FontSize="40" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
                     <Label x:Name="loaded" Text="1%" TextColor="#000" FontSize="30" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
                 </StackLayout>
             </StackLayout>

@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Collections.Specialized;
 using System.Net;
-using System.IO;
 
 namespace RoGust_Manager
 {
@@ -139,12 +136,84 @@ namespace RoGust_Manager
                 webClient.Dispose();
                 return responsefromserver;
             }
-            catch (Exception e)
+            catch /*(Exception e)*/
             {
                 return "";
             }
         }
 
+
+        internal static string PreluareNote()
+        {
+            try
+            {
+                WebClient webClient = new WebClient();
+
+                NameValueCollection formData = new NameValueCollection
+                {
+                    ["action"] = "get",
+                    
+                };
+
+                byte[] responseBytes = webClient.UploadValues(Vars.genmsg, "POST", formData);
+                string responsefromserver = Encoding.UTF8.GetString(responseBytes);
+                webClient.Dispose();
+                return responsefromserver;
+            }
+            catch /*(Exception e)*/
+            {
+                return "";
+            }
+
+        }
+
+        internal static string DescarcarePersoane(string action)
+        {
+            try
+            {
+                WebClient webClient = new WebClient();
+
+                NameValueCollection formData = new NameValueCollection
+                {
+                    ["action"] = action,
+
+                };
+
+                byte[] responseBytes = webClient.UploadValues(Vars.persoaneWeb, "POST", formData);
+                string responsefromserver = Encoding.UTF8.GetString(responseBytes);
+                webClient.Dispose();
+                return responsefromserver;
+            }
+            catch /*(Exception e)*/
+            {
+                return "";
+            }
+
+        }
+
+        internal static string IncarcarePersoane(string data)
+        {
+            try
+            {
+                WebClient webClient = new WebClient();
+
+                NameValueCollection formData = new NameValueCollection
+                {
+                    ["data"] = data,
+
+                };
+
+                byte[] responseBytes = webClient.UploadValues(Vars.persoaneUpload, "POST", formData);
+                string responsefromserver = Encoding.UTF8.GetString(responseBytes);
+                webClient.Dispose();
+                return responsefromserver;
+            }
+            catch /*(Exception e)*/
+            {
+                return "";
+            }
+
+        }
 
         internal static string GenerareRaport(string week, string tip, string lines)
         {
@@ -164,7 +233,7 @@ namespace RoGust_Manager
                 webClient.Dispose();
                 return responsefromserver;
             }
-            catch (Exception e)
+            catch /*(Exception e)*/
             {
                 return "";
             }

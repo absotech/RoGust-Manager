@@ -1,17 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
+﻿using System.Threading;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using System.IO;
 using Xamarin.Forms.Xaml;
+using System;
+using System.Threading.Tasks;
+using Java.Security;
+using Javax.Crypto;
+using Android.App;
+using Android.Hardware.Fingerprints;
+using Android.Widget;
 
 namespace RoGust_Manager
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Loading : ContentPage
     {
+        private KeyStore keyStore;
+        private Cipher cipher;
+        private string KEY_NAME = "Ahsan";
+
 
 
         public Loading()
@@ -19,7 +27,6 @@ namespace RoGust_Manager
             InitializeComponent();
             ThreadPool.QueueUserWorkItem(o => LoadingThread());
         }
-
 
         void LoadingThread()
         {
@@ -29,19 +36,15 @@ namespace RoGust_Manager
                 loaded.Text = "10%";
                 curop.Text = "Descărcare informații fiole";
             });
-            if(AppInfo.RequestedTheme == AppTheme.Light)
+            string name = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/person.json";
+            if (!File.Exists(name))
             {
-                Vars.primaryColor = Color.White;
-                Vars.secondaryColor = Color.Black;
+                File.WriteAllText(name, Dep.DescarcarePersoane("new"));
             }
-            else
-            {
-                Vars.primaryColor = Color.Black;
-                Vars.secondaryColor = Color.White;
-            }
-            
+            //Device.BeginInvokeOnMainThread(() => DisplayAlert("o", File.ReadAllText(name), "sss"));
             string result = Dep.DownloadData();
             Device.BeginInvokeOnMainThread(() => loaded.Text = "35%");
+            Vars.genmsg = Dep.PreluareNote();
             string[] resultArray = result.Split('#');
             if (result != "")
             {
@@ -58,6 +61,7 @@ namespace RoGust_Manager
                     }
                     catch
                     {
+                        //Device.BeginInvokeOnMainThread(() => DisplayAlert("Eroare fatală!", e.ToString(), "OK"));
                         Vars.ciclu2f = "0";
                         Vars.mentiuni2f = "0";
                         Vars.ciclu3f = "0";
@@ -71,6 +75,7 @@ namespace RoGust_Manager
 
             }
             Device.BeginInvokeOnMainThread(() => loaded.Text = "50%");
+            Device.BeginInvokeOnMainThread(() => loading_dot.Text += ".");
             Device.BeginInvokeOnMainThread(() => curop.Text = "Descărcare informații cutii");
             string resultct2 = Dep.DownloadCutii("2", Vars.getcutii);
 
@@ -79,6 +84,7 @@ namespace RoGust_Manager
             else
                 Device.BeginInvokeOnMainThread(() => DisplayAlert("Eroare!", "Verificați conexiunea la internet!", "OK"));
             Device.BeginInvokeOnMainThread(() => loaded.Text = "70%");
+            Device.BeginInvokeOnMainThread(() => loading_dot.Text += ".");
             string resultct3 = Dep.DownloadCutii("3", Vars.getcutii);
             if (resultct3 != "")
                 Vars.cutii3f = resultct3;
@@ -88,7 +94,8 @@ namespace RoGust_Manager
             {
                  loaded.Text = "90%";
                  curop.Text = "Terminat";
-                 App.Current.MainPage = new Page1();
+                 loading_dot.Text += ".";
+                App.Current.MainPage = new Page1();
             }); 
             
         }
