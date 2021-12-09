@@ -4,7 +4,6 @@ using System.IO;
 using Xamarin.Forms.Xaml;
 using System;
 using System.Threading.Tasks;
-using Android.App;
 using Plugin.Fingerprint;
 using Plugin.Fingerprint.Abstractions;
 
@@ -13,7 +12,7 @@ namespace RoGust_Manager
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Loading : ContentPage
     {
-        private bool isOk = true;
+        private bool notOk;
 
         public Loading()
         {
@@ -35,7 +34,7 @@ namespace RoGust_Manager
             else
             {
                 await DisplayAlert("Eroare!", "Citirea amprentei a fost anulată!\nAplicația se va închide!", "OK");
-                isOk = false;
+                notOk = true;
                 Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
 
             }

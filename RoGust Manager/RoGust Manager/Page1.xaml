@@ -103,17 +103,17 @@
                             <Label x:Name="perstotal_text" Text="Total:" WidthRequest="209" FontSize="18" TextColor="#000" VerticalOptions="CenterAndExpand"/>
                             <Button x:Name="minus_perstotal" WidthRequest="40" BorderColor="Black"  Text="-" Pressed="minus_perstotal_Pressed"/>
                             <!--<Entry x:Name="perstotal_nr" Text="0" MaxLength="5" WidthRequest="42" Keyboard="Numeric" FontSize="13"/>-->
-                            <Button x:Name="reset_perstotal" WidthRequest="40" BorderColor="Black"  Text="X" Pressed="reset_perstotal_Pressed"/>
+                            <Button x:Name="reset_perstotal" WidthRequest="42" BorderColor="Black"  Text="X" Pressed="reset_perstotal_Pressed"/>
                             <Button x:Name="plus_perstotal" WidthRequest="40" BorderColor="Black" Text="+" Pressed="plus_perstotal_Pressed"/>
                             <ImageButton x:Name="save_persall" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" Margin="10,10,10,10">
-                        <Button x:Name="save_names" Text="Salvează Nume" WidthRequest="136" BorderColor="Black" TextColor="#000" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Pressed="save_names_Pressed" CornerRadius="20"/>
-                        <Button x:Name="save_numbers" Text="Salvează Nr" WidthRequest="120" BorderColor="Black" TextColor="#000" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Pressed="save_numbers_Pressed" CornerRadius="20"/>
-                        <Button x:Name="save_all" Text="Salvează Tot" WidthRequest="123" BorderColor="Black" TextColor="#000" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Pressed="save_all_Pressed" CornerRadius="20"/>
+                        <Button x:Name="save_names" FontSize="13" Text="Salvează Nume" WidthRequest="125" BorderColor="Black" TextColor="#000" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Pressed="save_names_Pressed" CornerRadius="20"/>
+                        <Button x:Name="save_numbers" FontSize="13" Text="Salvează Nr" WidthRequest="115" BorderColor="Black" TextColor="#000" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Pressed="save_numbers_Pressed" CornerRadius="20"/>
+                        <Button x:Name="save_all" FontSize="13" Text="Salvează Tot" WidthRequest="115" BorderColor="Black" TextColor="#000" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Pressed="save_all_Pressed" CornerRadius="20"/>
                         </StackLayout>
                     <StackLayout Orientation="Horizontal" Margin="10,10,10,10">
-                        <Button x:Name="upload_json" Text="Trimitere pe server" WidthRequest="170" BorderColor="Black" TextColor="#000" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Pressed="upload_json_Pressed"/>
+                        <Button x:Name="upload_json" Text="Trimitere pe server" WidthRequest="170" BorderColor="Black" TextColor="#000" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Pressed="upload_json_Pressed" CornerRadius="20"/>
                     </StackLayout>
                 </StackLayout>
                 </ScrollView>
@@ -281,9 +281,9 @@
                         <Entry x:Name="week_to_generate" Text="0" MaxLength="2" WidthRequest="30" HeightRequest="36" Keyboard="Numeric" FontSize="15"/>
                         <Label  x:Name="current_week" Text="Săptămâna curentă:" TextColor="#000" FontSize="12" WidthRequest="80" VerticalOptions="CenterAndExpand"/>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                    <Button x:Name="generate_report20" BorderColor="Black"  Text="Generare raport 20.5" HorizontalOptions="StartAndExpand" Pressed="generate_report20_Pressed" CornerRadius="20"/>
-                    <Button x:Name="generate_report30" BorderColor="Black"  Text="Generare raport 30.5" HorizontalOptions="EndAndExpand" Pressed="generate_report30_Pressed" CornerRadius="20"/>
+                    <StackLayout Orientation="Horizontal" Margin="10,0,10,0">
+                    <Button x:Name="generate_report20" BorderColor="Black" FontSize="13"  Text="Generare raport 20.5" HorizontalOptions="StartAndExpand" Pressed="generate_report20_Pressed" CornerRadius="20"/>
+                    <Button x:Name="generate_report30" BorderColor="Black" FontSize="13" Text="Generare raport 30.5" HorizontalOptions="EndAndExpand" Pressed="generate_report30_Pressed" CornerRadius="20"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
                     <Button x:Name="generate_report" BorderColor="Black"  Text="Generare raport" IsEnabled="True" HorizontalOptions="CenterAndExpand" Pressed="generate_report_Pressed" CornerRadius="20"/>
