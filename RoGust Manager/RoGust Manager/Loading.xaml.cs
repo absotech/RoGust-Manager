@@ -1,35 +1,51 @@
 ﻿using System.Threading;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using System.IO;
 using Xamarin.Forms.Xaml;
 using System;
 using System.Threading.Tasks;
-using Java.Security;
-using Javax.Crypto;
 using Android.App;
-using Android.Hardware.Fingerprints;
-using Android.Widget;
+using Plugin.Fingerprint;
+using Plugin.Fingerprint.Abstractions;
 
 namespace RoGust_Manager
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Loading : ContentPage
     {
-        private KeyStore keyStore;
-        private Cipher cipher;
-        private string KEY_NAME = "Ahsan";
-
-
+        private bool isOk = true;
 
         public Loading()
         {
             InitializeComponent();
-            ThreadPool.QueueUserWorkItem(o => LoadingThread());
+            getAuthAsync();
+            
+
+        }
+
+
+        private async Task getAuthAsync()
+        {
+            var request = new AuthenticationRequestConfiguration("Fingerprint required", "Please authenticate.");
+            var result = await CrossFingerprint.Current.AuthenticateAsync(request);
+            if (result.Authenticated)
+            {
+                ThreadPool.QueueUserWorkItem(o => LoadingThread());
+            }
+            else
+            {
+                await DisplayAlert("Eroare!", "Citirea amprentei a fost anulată!\nAplicația se va închide!", "OK");
+                isOk = false;
+                Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+
+            }
+
         }
 
         void LoadingThread()
         {
+
+
             Device.BeginInvokeOnMainThread(() =>
             {
                 curop.Text = "Generare cheie unica";

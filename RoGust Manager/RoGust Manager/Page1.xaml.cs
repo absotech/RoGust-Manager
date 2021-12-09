@@ -553,11 +553,19 @@ namespace RoGust_Manager
                     shareable += root.people[i].Ore + " ore suplimentare\n";
                 }
             }
-            Share.RequestAsync(new ShareTextRequest
+            if(shareable != "")
             {
-                Text = shareable,
-                Title = "Raport Conta"
-            });
+                Share.RequestAsync(new ShareTextRequest
+                {
+                    Text = shareable,
+                    Title = "Raport Conta"
+                });
+            }
+            else
+            {
+                DisplayAlert("Eroare", "Nu există niciun nume de trimis.", "OK");
+            }
+            
 
         }
 
