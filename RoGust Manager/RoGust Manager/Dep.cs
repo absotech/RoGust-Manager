@@ -59,12 +59,12 @@ namespace RoGust_Manager
             }
         }
 
-        internal static string DownloadData()
+        internal static string DownloadData(string site)
         {
             try
             {
                 WebClient client = new WebClient();
-                string downloadString = client.DownloadString(Vars.getcurrent);
+                string downloadString = client.DownloadString(site);
                 client.Dispose();
                 return downloadString;
             }

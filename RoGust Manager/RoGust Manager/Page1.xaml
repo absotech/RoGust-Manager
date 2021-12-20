@@ -188,7 +188,7 @@
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
                             <Label  Text="Mentiuni" TextColor="#000" FontSize="25" VerticalOptions="CenterAndExpand"/>
-                            <Entry x:Name="mentiuni_text2f" Placeholder="Introduceti mentiunile aici" WidthRequest="280"/>
+                            <Entry x:Name="mentiuni_text2f" Placeholder="Introduceti mentiunile aici" WidthRequest="280" ReturnType="Done"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
                         <Button x:Name="schimbacutie2f" Text="Cutie schimbată" WidthRequest="145" BorderColor="Black" TextColor="#000" Pressed="schimbacutie2f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" CornerRadius="20"/>
@@ -223,7 +223,7 @@
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
                             <Label  Text="Mentiuni" TextColor="#000" FontSize="25" VerticalOptions="CenterAndExpand"/>
-                        <Entry x:Name="mentiuni_text3f" Placeholder="Introduceti mentiunile aici" WidthRequest="280"/>
+                        <Entry x:Name="mentiuni_text3f" Placeholder="Introduceti mentiunile aici" WidthRequest="280" ReturnType="Done"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
                         <Button x:Name="schimbacutie3f" Text="Cutie schimbată" WidthRequest="145" BorderColor="Black" TextColor="#000" Pressed="schimbacutie3f_Pressed" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" CornerRadius="20"/>

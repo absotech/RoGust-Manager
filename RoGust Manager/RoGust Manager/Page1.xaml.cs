@@ -5,7 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Newtonsoft.Json;
 using System.IO;
-
+using System.Threading.Tasks;
 
 namespace RoGust_Manager
 {
@@ -20,6 +20,7 @@ namespace RoGust_Manager
                 DisplayAlert("Notă", Vars.genmsg, "Ștergere");
             }
             SetPerson();
+            UpdateApp();
         }
 
         internal void SetPerson()
@@ -47,6 +48,33 @@ namespace RoGust_Manager
             CultureInfo ciCurr = CultureInfo.CurrentCulture;
             int weekNum = ciCurr.Calendar.GetWeekOfYear(DateTime.Now, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
             return weekNum;
+        }
+
+        internal async void UpdateApp()
+        {
+            if (Vars.GotVersion != 0)
+            {
+                bool a;
+                try
+                {
+                    
+                        
+                        if (Convert.ToDouble(Vars.GotVersion) > Vars.Version)
+                        {
+                        a = await DisplayAlert("Actualizare", "O nouă versiune este disponibilă. Doriți să o instalați acum?" /*+ "\n" + Vars.Version + "\n" + Vars.GotVersion*/, "Da", "Nu");
+                        if (a)
+                            {
+                                Browser.OpenAsync(Vars.updateLink, BrowserLaunchMode.SystemPreferred);
+                            }
+                        }
+                    
+                }
+                catch
+                {
+
+                }
+
+            }
         }
 
         #region -FIRST PAGE-
