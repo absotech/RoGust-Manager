@@ -13,9 +13,9 @@
             <StackLayout VerticalOptions="StartAndExpand" Margin="10,0,0,0">
                 <Image Source="IvanConnectionsLogo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" WidthRequest="150"/>
             </StackLayout>
-            <StackLayout VerticalOptions="CenterAndExpand">
+            <StackLayout VerticalOptions="StartAndExpand">
                 <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                    <Image Source="logo_RogustB.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="250"/>
+                    <Image Source="logo_RogustB.png" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" WidthRequest="250"/>
                 </StackLayout>
                 <StackLayout Orientation="Vertical" Margin="10,0,0,0" >
                     <Label x:Name="loading_dot" Text="Se încarcă." TextColor="#000" FontSize="40" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
@@ -23,7 +23,7 @@
                 </StackLayout>
             </StackLayout>
             <StackLayout Orientation="Vertical" Margin="10,20,20,20" VerticalOptions="End">
-                <Label x:Name="curop" Text="Operație curentă:" TextColor="#000" FontSize="20" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                <Label x:Name="curop" Text="Operație curentă: Generare cheie unică" TextColor="#000" FontSize="20" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
