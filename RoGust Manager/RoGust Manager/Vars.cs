@@ -10,19 +10,19 @@ namespace RoGust_Manager
         internal static double GotVersion = 0;
 
         #region Website
-        internal static string upload2f = "https://ivanconnections.com/data/app/rogust/save2f.php";
-        internal static string upload3f = "https://ivanconnections.com/data/app/rogust/save3f.php";
-        internal static string getcurrent = "https://ivanconnections.com/data/app/rogust/getcurrent.php";
-        internal static string uploadcutie = "https://ivanconnections.com/data/app/rogust/savecutii.php";
-        internal static string getcutii = "https://ivanconnections.com/data/app/rogust/getcutii.php";
-        internal static string schimbacutii = "https://ivanconnections.com/data/app/rogust/schimbacutii.php";
-        internal static string fioleshare = "https://ivanconnections.com/data/app/rogust/fioleshare.php";
-        internal static string genrap = "https://ivanconnections.com/data/app/rogust/genrap.php";
-        internal static string genmsg = "https://ivanconnections.com/data/app/rogust/getmessage.php";
-        internal static string persoaneWeb = "https://ivanconnections.com/data/app/rogust/getjson.php";
-        internal static string persoaneUpload = "https://ivanconnections.com/data/app/rogust/putjson.php";
-        internal static string versionLink = "https://ivanconnections.com/data/app/rogust/CurrentVersion.dat";
-        internal static string updateLink = "https://ivanconnections.com/rm.apk";
+        internal static string upload2f = "http://ivanconnections.com/data/app/rogust/save2f.php";
+        internal static string upload3f = "http://ivanconnections.com/data/app/rogust/save3f.php";
+        internal static string getcurrent = "http://ivanconnections.com/data/app/rogust/getcurrent.php";
+        internal static string uploadcutie = "http://ivanconnections.com/data/app/rogust/savecutii.php";
+        internal static string getcutii = "http://ivanconnections.com/data/app/rogust/getcutii.php";
+        internal static string schimbacutii = "http://ivanconnections.com/data/app/rogust/schimbacutii.php";
+        internal static string fioleshare = "http://ivanconnections.com/data/app/rogust/fioleshare.php";
+        internal static string genrap = "http://ivanconnections.com/data/app/rogust/genrap.php";
+        internal static string genmsg = "http://ivanconnections.com/data/app/rogust/getmessage.php";
+        internal static string persoaneWeb = "http://ivanconnections.com/data/app/rogust/getjson.php";
+        internal static string persoaneUpload = "http://ivanconnections.com/data/app/rogust/putjson.php";
+        internal static string versionLink = "http://ivanconnections.com/data/app/rogust/CurrentVersion.dat";
+        internal static string updateLink = "http://ivanconnections.com/rm.apk";
         #endregion
 
         internal static string ciclu2f, ciclu3f, mentiuni2f, mentiuni3f, cutii2f, cutii3f = "";
