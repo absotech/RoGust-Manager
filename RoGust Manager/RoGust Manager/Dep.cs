@@ -9,10 +9,10 @@ namespace RoGust_Manager
     {
         internal static string UploadData2f(string cicluri, string peturi, string mentiuni)
         {
+
             try
             {
                 WebClient webClient = new WebClient();
-
                 NameValueCollection formData = new NameValueCollection
                 {
                     ["cicluri"] = cicluri,
@@ -39,7 +39,6 @@ namespace RoGust_Manager
             try
             {
                 WebClient webClient = new WebClient();
-
                 NameValueCollection formData = new NameValueCollection
                 {
                     ["cicluri"] = cicluri,
@@ -80,7 +79,6 @@ namespace RoGust_Manager
             try
             {
                 WebClient webClient = new WebClient();
-
                 NameValueCollection formData = new NameValueCollection
                 {
                     ["tip"] = tip,
@@ -103,7 +101,6 @@ namespace RoGust_Manager
             try
             {
                 WebClient webClient = new WebClient();
-
                 NameValueCollection formData = new NameValueCollection
                 {
                     ["tip"] = tip,
@@ -125,7 +122,6 @@ namespace RoGust_Manager
             try
             {
                 WebClient webClient = new WebClient();
-
                 NameValueCollection formData = new NameValueCollection
                 {
                     ["tip"] = tip
@@ -148,7 +144,6 @@ namespace RoGust_Manager
             try
             {
                 WebClient webClient = new WebClient();
-
                 NameValueCollection formData = new NameValueCollection
                 {
                     ["action"] = "get",
@@ -172,7 +167,6 @@ namespace RoGust_Manager
             try
             {
                 WebClient webClient = new WebClient();
-
                 NameValueCollection formData = new NameValueCollection
                 {
                     ["action"] = action,
@@ -196,7 +190,6 @@ namespace RoGust_Manager
             try
             {
                 WebClient webClient = new WebClient();
-
                 NameValueCollection formData = new NameValueCollection
                 {
                     ["data"] = data,
@@ -220,7 +213,6 @@ namespace RoGust_Manager
             try
             {
                 WebClient webClient = new WebClient();
-
                 NameValueCollection formData = new NameValueCollection
                 {
                     ["week"] = week,

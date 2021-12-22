@@ -10,12 +10,12 @@
                 </Grid.RowDefinitions>
                 <Label FontAttributes="Bold" BackgroundColor="#F44336" FontSize="21" TextColor="#FFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Vă rugăm așteptați"/>
             </Grid>
-            <StackLayout VerticalOptions="StartAndExpand" Margin="10,0,0,0">
-                <Image Source="IvanConnectionsLogo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" WidthRequest="150"/>
+            <StackLayout VerticalOptions="Start" Margin="10,0,0,0">
+                <Image Source="IvanConnectionsLogo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" WidthRequest="100"/>
             </StackLayout>
-            <StackLayout VerticalOptions="StartAndExpand">
+            <StackLayout VerticalOptions="Center">
                 <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-                    <Image Source="logo_RogustB.png" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" WidthRequest="250"/>
+                    <Image Source="logo_RogustB.png" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" WidthRequest="300"/>
                 </StackLayout>
                 <StackLayout Orientation="Vertical" Margin="10,0,0,0" >
                     <Label x:Name="loading_dot" Text="Se încarcă." TextColor="#000" FontSize="40" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
