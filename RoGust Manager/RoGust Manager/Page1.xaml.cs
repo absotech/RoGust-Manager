@@ -20,9 +20,49 @@ namespace RoGust_Manager
                 DisplayAlert("Notă", Vars.genmsg, "Ștergere");
             }
             SetPerson();
+            GetStoc();
             UpdateApp();
         }
 
+        internal void GetStoc()
+        {
+            try
+            {
+                string[] bcData = {  };
+                bcData = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/bc.dat");
+                bc_nr.Text = bcData[0];
+                bc_nrmax.Text = bcData[1];
+
+                string[] tData = {  };
+                tData = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/t.dat");
+                t_nr.Text = tData[0];
+                t_nrmax.Text = tData[1];
+
+                string[] stData = {  };
+                stData = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/st.dat");
+                st_nr.Text = stData[0];
+                st_nrmax.Text = stData[1];
+
+                string[] fiData = {  };
+                fiData = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/fi.dat");
+                fi_nr.Text = fiData[0];
+                fi_nrmax.Text = fiData[1];
+
+                string[] adData = {  };
+                adData = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/ad.dat");
+                ad_nr.Text = adData[0];
+                ad_nrmax.Text = adData[1];
+
+                string[] xData = {  };
+                xData = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/x.dat");
+                x_nr.Text = xData[0];
+                x_nrmax.Text = xData[1];
+            }
+            catch
+            {
+
+            }
+        }
         internal void SetPerson()
         {
             string name = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/person.json";
@@ -233,9 +273,68 @@ namespace RoGust_Manager
 
             string[] stData = { st_nr.Text, st_nrmax.Text };
             File.WriteAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/st.dat", stData);
+
+            string[] fiData = { fi_nr.Text, fi_nrmax.Text };
+            File.WriteAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/fi.dat", fiData);
+
+            string[] adData = { ad_nr.Text, ad_nrmax.Text };
+            File.WriteAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/ad.dat", adData);
+
+            string[] xData = { x_nr.Text, x_nrmax.Text };
+            File.WriteAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/x.dat", xData);
         }
 
+        private void bazine_nr_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
 
+        private void pal1_nr_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+            if(pal1_nr.Text != null)
+                pal1_res.Text = "(" + (Convert.ToInt32(pal1_nr.Text) *75).ToString() + " baxuri)";
+            }
+            catch
+
+            {
+
+            }
+        }
+
+        private void pal15_nr_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            { 
+            if (pal15_nr.Text != null)
+                pal15_res.Text = "(" + (Convert.ToInt32(pal15_nr.Text) * 71).ToString() + " baxuri)";
+            }
+            catch
+
+            {
+
+            }
+        }
+
+        private void cutii_nrstoc_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                if (cutii_nrstoc.Text != null)
+                    cutii_res.Text = "(" + (Convert.ToInt32(cutii_nrstoc.Text) * 60).ToString() + " baxuri)";
+            }
+            catch
+
+            {
+
+            }
+        }
+
+        private void send_stocambalat_Pressed(object sender, EventArgs e)
+        {
+            Dep.UploadStoc(bazine_nr.Text, pal1_nr.Text, pal15_nr.Text, cutii_nrstoc.Text, note_stoc.Text);
+        }
 
 
         #endregion
@@ -605,6 +704,7 @@ namespace RoGust_Manager
         {
 
         }
+
 
 
 

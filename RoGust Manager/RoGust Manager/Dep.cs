@@ -231,5 +231,31 @@ namespace RoGust_Manager
             }
 
         }
+
+        internal static string UploadStoc(string bazine, string paleti1, string paleti15, string cutii, string note)
+        {
+
+            try
+            {
+                WebClient webClient = new WebClient();
+                NameValueCollection formData = new NameValueCollection
+                {
+                    ["bazine"] = bazine,
+                    ["paleti1"] = paleti1,
+                    ["paleti15"] = paleti15,
+                    ["cutii"] = cutii,
+                    ["note"] = note
+                };
+
+                byte[] responseBytes = webClient.UploadValues(Vars.uploadstocweb, "POST", formData);
+                string responsefromserver = Encoding.UTF8.GetString(responseBytes);
+                webClient.Dispose();
+                return "";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
+        }
     }
 }

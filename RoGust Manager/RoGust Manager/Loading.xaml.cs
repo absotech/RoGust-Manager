@@ -51,6 +51,8 @@ namespace RoGust_Manager
                 loaded.Text = "10%";
             });
             Device.BeginInvokeOnMainThread(() => curop.Text = "Descărcare informații fiole");
+            if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc"))
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc");
             string name = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/person.json";
             if (!File.Exists(name))
             {
