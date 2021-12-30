@@ -159,10 +159,10 @@
 					<Label FontSize="20" TextColor="#000" VerticalTextAlignment="Center" Text="/"/>
 					<Entry x:Name="fi_nrmax" TextColor="Red" Text="0" MaxLength="2" WidthRequest="35" Keyboard="Numeric" Margin="0,0,10,0"/>
 
-					<Label FontSize="20" FontAttributes="Bold" TextColor="#000" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="P"/>
-					<Entry x:Name="p_nr" Text="0" MaxLength="2" WidthRequest="35" Keyboard="Numeric"/>
+					<Label FontSize="20" FontAttributes="Bold" TextColor="#000" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Ad"/>
+					<Entry x:Name="ad_nr" Text="0" MaxLength="2" WidthRequest="35" Keyboard="Numeric"/>
 					<Label FontSize="20" TextColor="#000" VerticalTextAlignment="Center" Text="/"/>
-					<Entry x:Name="p_nrmax" TextColor="Red" Text="0" MaxLength="2" WidthRequest="35" Keyboard="Numeric" Margin="0,0,10,0"/>
+					<Entry x:Name="ad_nrmax" TextColor="Red" Text="0" MaxLength="2" WidthRequest="35" Keyboard="Numeric" Margin="0,0,10,0"/>
 
 					<Label FontSize="20" FontAttributes="Bold" TextColor="#000" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="X"/>
 					<Entry x:Name="x_nr" Text="0" MaxLength="2" WidthRequest="35" Keyboard="Numeric"/>
@@ -170,7 +170,7 @@
 					<Entry x:Name="x_nrmax" TextColor="Red" Text="0" MaxLength="2" WidthRequest="35" Keyboard="Numeric"/>
 					</StackLayout>
 				<StackLayout Orientation="Horizontal" Margin="10,0,0,0">
-					<Button x:Name="save_comenzitemp" BorderColor="Black"  Text="Salvează" IsEnabled="True" HorizontalOptions="CenterAndExpand" CornerRadius="20"/>
+					<Button x:Name="save_comenzitemp" BorderColor="Black" Text="Salvează" IsEnabled="True" HorizontalOptions="CenterAndExpand" CornerRadius="20" Pressed="save_comenzitemp_Pressed"/>
 				</StackLayout>
 				<Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
 					<Grid.RowDefinitions >
@@ -206,7 +206,7 @@
 				</Grid>
 				
 				<StackLayout Orientation="Vertical" Margin="10,0,0,0">
-                        <Editor x:Name="note_stoc" Text="0" WidthRequest="300" Keyboard="Default" HorizontalOptions="Center" VerticalOptions="Center" MinimumHeightRequest="130" AutoSize="TextChanges"/>
+                        <Editor x:Name="note_stoc" Text="" WidthRequest="300" Keyboard="Default" HorizontalOptions="Center" VerticalOptions="Center" MinimumHeightRequest="130" AutoSize="TextChanges"/>
                         <Button x:Name="send_stocambalat" BorderColor="Black"  Text="Trimite" IsEnabled="True" HorizontalOptions="CenterAndExpand" CornerRadius="20"/>
 				</StackLayout>
 			</StackLayout>

@@ -222,19 +222,23 @@ namespace RoGust_Manager
 
         #endregion
 
+        #region -SECOND PAGE-
+        private void save_comenzitemp_Pressed(object sender, EventArgs e)
+        {
+            string[] bcData = {bc_nr.Text, bc_nrmax.Text };
+            File.WriteAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/bc.dat", bcData);
+
+            string[] tData = { t_nr.Text, t_nrmax.Text };
+            File.WriteAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/t.dat", tData);
+
+            string[] stData = { st_nr.Text, st_nrmax.Text };
+            File.WriteAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/st.dat", stData);
+        }
 
 
 
 
-
-
-
-        //SECOND PAGE
-
-
-
-
-
+        #endregion
 
 
         #region -THIRD PAGE-
@@ -603,8 +607,8 @@ namespace RoGust_Manager
         }
 
 
-        #endregion
 
+        #endregion
 
     }
 }
