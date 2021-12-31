@@ -30,6 +30,7 @@ namespace RoGust_Manager
         #endregion
 
         internal static string ciclu2f, ciclu3f, mentiuni2f, mentiuni3f, cutii2f, cutii3f = "";
+        internal static string stoc_baz, stoc_pal1, stoc_pal15, stoc_cutii, stoc_note = "";
         internal static string note = "";
 
     }
