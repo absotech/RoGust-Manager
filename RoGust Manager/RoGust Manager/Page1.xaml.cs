@@ -57,6 +57,13 @@ namespace RoGust_Manager
                 xData = File.ReadAllLines(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc/x.dat");
                 x_nr.Text = xData[0];
                 x_nrmax.Text = xData[1];
+
+
+                bazine_nr.Text = Vars.stoc_baz;
+                pal1_nr.Text = Vars.stoc_pal1;
+                pal15_nr.Text = Vars.stoc_pal15;
+                cutii_nrstoc.Text = Vars.stoc_cutii;
+                note_stoc.Text = Vars.stoc_note;
             }
             catch
             {

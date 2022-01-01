@@ -6,7 +6,7 @@ namespace RoGust_Manager
     internal static class Vars
     {
         internal static string Code = "7833";
-        internal static double Version = 2.36;
+        internal static double Version = 2.41;
         internal static double GotVersion = 0;
 
         #region Website
@@ -14,6 +14,8 @@ namespace RoGust_Manager
         internal static string upload3f = "http://ivanconnections.com/data/app/rogust/save3f.php";
 
         internal static string uploadstocweb = "http://ivanconnections.com/data/app/rogust/ulstoc.php";
+        internal static string getstoc = "http://ivanconnections.com/data/app/rogust/getstoc.php";
+        
 
         internal static string getcurrent = "http://ivanconnections.com/data/app/rogust/getcurrent.php";
         internal static string genmsg = "http://ivanconnections.com/data/app/rogust/getmessage.php";
@@ -27,6 +29,7 @@ namespace RoGust_Manager
         internal static string persoaneUpload = "http://ivanconnections.com/data/app/rogust/putjson.php";
         internal static string versionLink = "http://ivanconnections.com/data/app/rogust/CurrentVersion.dat";
         internal static string updateLink = "http://ivanconnections.com/rm.apk";
+        
         #endregion
 
         internal static string ciclu2f, ciclu3f, mentiuni2f, mentiuni3f, cutii2f, cutii3f = "";

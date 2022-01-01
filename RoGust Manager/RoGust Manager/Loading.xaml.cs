@@ -92,6 +92,30 @@ namespace RoGust_Manager
                 }
 
             }
+            string resultstoc = Dep.DownloadData(Vars.getstoc);
+            Device.BeginInvokeOnMainThread(() => loaded.Text = "40%");
+            Vars.genmsg = Dep.PreluareNote();
+            if (resultstoc != "")
+            {
+                try
+                {
+                    Vars.stoc_baz = resultstoc.Split('^')[0];
+                    Vars.stoc_pal1 = resultstoc.Split('^')[1];
+                    Vars.stoc_pal15 = resultstoc.Split('^')[2];
+                    Vars.stoc_cutii = resultstoc.Split('^')[3];
+                    Vars.stoc_note = resultstoc.Split('^')[4];
+                }
+                catch
+                {
+                    //Device.BeginInvokeOnMainThread(() => DisplayAlert("Eroare fatală!", e.ToString(), "OK"));
+                    Vars.stoc_baz = "0";
+                    Vars.stoc_pal1 = "0";
+                    Vars.stoc_pal15 = "0";
+                    Vars.stoc_cutii = "0";
+                    Vars.stoc_note= " ";
+                }
+
+            }
             Device.BeginInvokeOnMainThread(() => loaded.Text = "50%");
             Device.BeginInvokeOnMainThread(() => loading_dot.Text += ".");
             Device.BeginInvokeOnMainThread(() => curop.Text = "Descărcare informații cutii");
