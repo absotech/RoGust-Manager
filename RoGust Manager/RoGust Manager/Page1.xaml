@@ -196,7 +196,7 @@
 				<StackLayout Orientation="Horizontal" Margin="10,0,0,10">
 					<Label FontSize="20" TextColor="#000" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Cutii" WidthRequest="80"/>
 					<Entry x:Name="cutii_nrstoc" Text="0" MaxLength="2" WidthRequest="35" Keyboard="Numeric" TextChanged="cutii_nrstoc_TextChanged"/>
-                    <Label x:Name="cutii_res" FontSize="20" TextColor="#000" VerticalTextAlignment="Center" Text="( baxuri)"/>
+                    <Label x:Name="cutii_res" FontSize="20" TextColor="#000" VerticalTextAlignment="Center" Text="( cutii)"/>
 				</StackLayout>
 				<Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
 					<Grid.RowDefinitions >

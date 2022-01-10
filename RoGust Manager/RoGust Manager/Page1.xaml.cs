@@ -340,7 +340,11 @@ namespace RoGust_Manager
 
         private void send_stocambalat_Pressed(object sender, EventArgs e)
         {
-            Dep.UploadStoc(bazine_nr.Text, pal1_nr.Text, pal15_nr.Text, cutii_nrstoc.Text, note_stoc.Text);
+            string ex = Dep.UploadStoc(bazine_nr.Text, pal1_nr.Text, pal15_nr.Text, cutii_nrstoc.Text, note_stoc.Text);
+            if (ex == "")
+                DisplayAlert("Succes!", "Trimis către server!", "OK");
+            else
+                DisplayAlert("Eroare!", "Nu s-au putut trimite datele!", "OK");
         }
 
 
@@ -674,7 +678,11 @@ namespace RoGust_Manager
         {
             save_all_Pressed(this, null);
             string name = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/person.json";
-            Dep.IncarcarePersoane(File.ReadAllText(name));
+            string ex = Dep.IncarcarePersoane(File.ReadAllText(name));
+            if (ex != "")
+                DisplayAlert("Succes!", "Trimis către server!", "OK");
+            else
+                DisplayAlert("Eroare!", "Nu s-au putut trimite datele!", "OK");
         }
 
         private void generate_reportConta_Pressed(object sender, EventArgs e)

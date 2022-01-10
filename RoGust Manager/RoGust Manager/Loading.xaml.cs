@@ -58,7 +58,7 @@ namespace RoGust_Manager
             {
                 File.WriteAllText(name, Dep.DescarcarePersoane("new"));
             }
-            //Vars.GotVersion = Convert.ToDouble(Dep.DownloadData(Vars.versionLink));
+            Vars.GotVersion = Convert.ToDouble(Dep.DownloadData(Vars.versionLink));
             //Device.BeginInvokeOnMainThread(() => DisplayAlert("o", File.ReadAllText(name), "sss"));
             string result = Dep.DownloadData(Vars.getcurrent);
             Device.BeginInvokeOnMainThread(() => loaded.Text = "35%");
