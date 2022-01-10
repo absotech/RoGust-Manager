@@ -6,7 +6,7 @@ namespace RoGust_Manager
     internal static class Vars
     {
         internal static string Code = "7833";
-        internal static double Version = 2.41;
+        internal static double Version = 2.42;
         internal static double GotVersion = 0;
 
         #region Website

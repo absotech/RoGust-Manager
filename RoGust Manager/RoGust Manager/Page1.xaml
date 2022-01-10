@@ -331,7 +331,7 @@
 					<Label FontAttributes="Bold" FontSize="20" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Stoc"/>
 				</Grid>
 				<StackLayout Orientation="Horizontal" Margin="10,0,0,20">
-					<Button x:Name="generate_reportStoc" BorderColor="Black"  Text="Generare raport" HorizontalOptions="CenterAndExpand" Pressed="generate_reportStoc_Pressed" IsEnabled="False" CornerRadius="20"/>
+					<Button x:Name="generate_reportStoc" BorderColor="Black"  Text="Generare raport" HorizontalOptions="CenterAndExpand" Pressed="generate_reportStoc_Pressed" IsEnabled="True" CornerRadius="20"/>
 				</StackLayout>
 				<Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
 						<Grid.RowDefinitions >

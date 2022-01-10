@@ -709,13 +709,18 @@ namespace RoGust_Manager
 
         private void generate_reportStoc_Pressed(object sender, EventArgs e)
         {
-
+            string rap;
+            rap = Dep.GenerareRaport(week_to_generate.Text.ToString(), "4", "0");
+            Share.RequestAsync(new ShareTextRequest
+            {
+                Text = rap,
+                Title = "Raport Stoc"
+            });
         }
 
 
 
 
         #endregion
-
     }
 }
