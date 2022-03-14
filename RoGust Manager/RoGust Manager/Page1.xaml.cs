@@ -679,7 +679,7 @@ namespace RoGust_Manager
             save_all_Pressed(this, null);
             string name = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/person.json";
             string ex = Dep.IncarcarePersoane(File.ReadAllText(name));
-            if (ex != "")
+            if (ex == "")
                 DisplayAlert("Succes!", "Trimis către server!", "OK");
             else
                 DisplayAlert("Eroare!", "Nu s-au putut trimite datele!", "OK");

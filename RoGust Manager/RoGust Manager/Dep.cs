@@ -201,9 +201,9 @@ namespace RoGust_Manager
                 webClient.Dispose();
                 return responsefromserver;
             }
-            catch /*(Exception e)*/
+            catch (Exception e)
             {
-                return "";
+                return e.ToString();
             }
 
         }
