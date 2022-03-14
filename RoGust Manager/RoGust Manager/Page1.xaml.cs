@@ -124,146 +124,146 @@ namespace RoGust_Manager
             }
         }
 
-        #region -FIRST PAGE-
+        #region -OLD FIRST PAGE-
 
-        //entry no.1
-        private void minus_pers1_Pressed(object sender, EventArgs e)
-        {
-            pers1_nr.Text = (Convert.ToDouble(pers1_nr.Text) - 0.5).ToString();
-        }
-        private void plus_pers1_Pressed(object sender, EventArgs e)
-        {
-            pers1_nr.Text = (Convert.ToDouble(pers1_nr.Text) + 0.5).ToString();
-        }
+        ////entry no.1
+        //private void minus_pers1_Pressed(object sender, EventArgs e)
+        //{
+        //    pers1_nr.Text = (Convert.ToDouble(pers1_nr.Text) - 0.5).ToString();
+        //}
+        //private void plus_pers1_Pressed(object sender, EventArgs e)
+        //{
+        //    pers1_nr.Text = (Convert.ToDouble(pers1_nr.Text) + 0.5).ToString();
+        //}
 
 
-        //entry no.2
+        ////entry no.2
 
-        private void minus_pers2_Pressed(object sender, EventArgs e)
-        {
-            pers2_nr.Text = (Convert.ToDouble(pers2_nr.Text) - 0.5).ToString();
-        }
+        //private void minus_pers2_Pressed(object sender, EventArgs e)
+        //{
+        //    pers2_nr.Text = (Convert.ToDouble(pers2_nr.Text) - 0.5).ToString();
+        //}
 
-        private void plus_pers2_Pressed(object sender, EventArgs e)
-        {
-            pers2_nr.Text = (Convert.ToDouble(pers2_nr.Text) + 0.5).ToString();
-        }
+        //private void plus_pers2_Pressed(object sender, EventArgs e)
+        //{
+        //    pers2_nr.Text = (Convert.ToDouble(pers2_nr.Text) + 0.5).ToString();
+        //}
 
-        //entry no.3
+        ////entry no.3
 
-        private void minus_pers3_Pressed(object sender, EventArgs e)
-        {
-            pers3_nr.Text = (Convert.ToDouble(pers3_nr.Text) - 0.5).ToString();
-        }
+        //private void minus_pers3_Pressed(object sender, EventArgs e)
+        //{
+        //    pers3_nr.Text = (Convert.ToDouble(pers3_nr.Text) - 0.5).ToString();
+        //}
 
-        private void plus_pers3_Pressed(object sender, EventArgs e)
-        {
-            pers3_nr.Text = (Convert.ToDouble(pers3_nr.Text) + 0.5).ToString();
-        }
+        //private void plus_pers3_Pressed(object sender, EventArgs e)
+        //{
+        //    pers3_nr.Text = (Convert.ToDouble(pers3_nr.Text) + 0.5).ToString();
+        //}
 
-        //entry no.4
-        private void minus_pers4_Pressed(object sender, EventArgs e)
-        {
-            pers4_nr.Text = (Convert.ToDouble(pers4_nr.Text) - 0.5).ToString();
-        }
+        ////entry no.4
+        //private void minus_pers4_Pressed(object sender, EventArgs e)
+        //{
+        //    pers4_nr.Text = (Convert.ToDouble(pers4_nr.Text) - 0.5).ToString();
+        //}
 
-        private void plus_pers4_Pressed(object sender, EventArgs e)
-        {
-            pers4_nr.Text = (Convert.ToDouble(pers4_nr.Text) + 0.5).ToString();
-        }
+        //private void plus_pers4_Pressed(object sender, EventArgs e)
+        //{
+        //    pers4_nr.Text = (Convert.ToDouble(pers4_nr.Text) + 0.5).ToString();
+        //}
 
-        //entry no.5
+        ////entry no.5
 
-        private void minus_pers5_Pressed(object sender, EventArgs e)
-        {
-            pers5_nr.Text = (Convert.ToDouble(pers5_nr.Text) - 0.5).ToString();
-        }
+        //private void minus_pers5_Pressed(object sender, EventArgs e)
+        //{
+        //    pers5_nr.Text = (Convert.ToDouble(pers5_nr.Text) - 0.5).ToString();
+        //}
 
-        private void plus_pers5_Pressed(object sender, EventArgs e)
-        {
-            pers5_nr.Text = (Convert.ToDouble(pers5_nr.Text) + 0.5).ToString();
-        }
+        //private void plus_pers5_Pressed(object sender, EventArgs e)
+        //{
+        //    pers5_nr.Text = (Convert.ToDouble(pers5_nr.Text) + 0.5).ToString();
+        //}
 
-        //entry no.6
+        ////entry no.6
 
-        private void minus_pers6_Pressed(object sender, EventArgs e)
-        {
-            pers6_nr.Text = (Convert.ToDouble(pers6_nr.Text) - 0.5).ToString();
-        }
+        //private void minus_pers6_Pressed(object sender, EventArgs e)
+        //{
+        //    pers6_nr.Text = (Convert.ToDouble(pers6_nr.Text) - 0.5).ToString();
+        //}
 
-        private void plus_pers6_Pressed(object sender, EventArgs e)
-        {
-            pers6_nr.Text = (Convert.ToDouble(pers6_nr.Text) + 0.5).ToString();
-        }
+        //private void plus_pers6_Pressed(object sender, EventArgs e)
+        //{
+        //    pers6_nr.Text = (Convert.ToDouble(pers6_nr.Text) + 0.5).ToString();
+        //}
 
-        //entry no.7
+        ////entry no.7
 
-        private void minus_pers7_Pressed(object sender, EventArgs e)
-        {
-            pers7_nr.Text = (Convert.ToDouble(pers7_nr.Text) - 0.5).ToString();
-        }
+        //private void minus_pers7_Pressed(object sender, EventArgs e)
+        //{
+        //    pers7_nr.Text = (Convert.ToDouble(pers7_nr.Text) - 0.5).ToString();
+        //}
 
-        private void plus_pers7_Pressed(object sender, EventArgs e)
-        {
-            pers7_nr.Text = (Convert.ToDouble(pers7_nr.Text) + 0.5).ToString();
-        }
+        //private void plus_pers7_Pressed(object sender, EventArgs e)
+        //{
+        //    pers7_nr.Text = (Convert.ToDouble(pers7_nr.Text) + 0.5).ToString();
+        //}
 
-        //entry no.8
+        ////entry no.8
 
-        private void minus_pers8_Pressed(object sender, EventArgs e)
-        {
-            pers8_nr.Text = (Convert.ToDouble(pers8_nr.Text) - 0.5).ToString();
-        }
+        //private void minus_pers8_Pressed(object sender, EventArgs e)
+        //{
+        //    pers8_nr.Text = (Convert.ToDouble(pers8_nr.Text) - 0.5).ToString();
+        //}
 
-        private void plus_pers8_Pressed(object sender, EventArgs e)
-        {
-            pers8_nr.Text = (Convert.ToDouble(pers8_nr.Text) + 0.5).ToString();
-        }
+        //private void plus_pers8_Pressed(object sender, EventArgs e)
+        //{
+        //    pers8_nr.Text = (Convert.ToDouble(pers8_nr.Text) + 0.5).ToString();
+        //}
 
-        //entry no.9
+        ////entry no.9
 
-        private void minus_pers9_Pressed(object sender, EventArgs e)
-        {
-            pers9_nr.Text = (Convert.ToDouble(pers9_nr.Text) - 0.5).ToString();
-        }
+        //private void minus_pers9_Pressed(object sender, EventArgs e)
+        //{
+        //    pers9_nr.Text = (Convert.ToDouble(pers9_nr.Text) - 0.5).ToString();
+        //}
 
-        private void plus_pers9_Pressed(object sender, EventArgs e)
-        {
-            pers9_nr.Text = (Convert.ToDouble(pers9_nr.Text) + 0.5).ToString();
-        }
+        //private void plus_pers9_Pressed(object sender, EventArgs e)
+        //{
+        //    pers9_nr.Text = (Convert.ToDouble(pers9_nr.Text) + 0.5).ToString();
+        //}
 
-        //entry no.10
+        ////entry no.10
 
-        private void minus_pers10_Pressed(object sender, EventArgs e)
-        {
-            pers10_nr.Text = (Convert.ToDouble(pers10_nr.Text) - 0.5).ToString();
-        }
+        //private void minus_pers10_Pressed(object sender, EventArgs e)
+        //{
+        //    pers10_nr.Text = (Convert.ToDouble(pers10_nr.Text) - 0.5).ToString();
+        //}
 
-        private void plus_pers10_Pressed(object sender, EventArgs e)
-        {
-            pers10_nr.Text = (Convert.ToDouble(pers10_nr.Text) + 0.5).ToString();
-        }
+        //private void plus_pers10_Pressed(object sender, EventArgs e)
+        //{
+        //    pers10_nr.Text = (Convert.ToDouble(pers10_nr.Text) + 0.5).ToString();
+        //}
 
-        //entry all
+        ////entry all
 
-        private void minus_perstotal_Pressed(object sender, EventArgs e)
-        {
-            //perstotal_nr.Text = (Convert.ToDouble(perstotal_nr.Text) - 0.5).ToString();
-            minus_pers1_Pressed(this, null); minus_pers2_Pressed(this, null); minus_pers3_Pressed(this, null); minus_pers4_Pressed(this, null); minus_pers5_Pressed(this, null);
-            minus_pers6_Pressed(this, null); minus_pers7_Pressed(this, null); minus_pers8_Pressed(this, null); minus_pers9_Pressed(this, null); minus_pers10_Pressed(this, null);
-        }
+        //private void minus_perstotal_Pressed(object sender, EventArgs e)
+        //{
+        //    //perstotal_nr.Text = (Convert.ToDouble(perstotal_nr.Text) - 0.5).ToString();
+        //    minus_pers1_Pressed(this, null); minus_pers2_Pressed(this, null); minus_pers3_Pressed(this, null); minus_pers4_Pressed(this, null); minus_pers5_Pressed(this, null);
+        //    minus_pers6_Pressed(this, null); minus_pers7_Pressed(this, null); minus_pers8_Pressed(this, null); minus_pers9_Pressed(this, null); minus_pers10_Pressed(this, null);
+        //}
 
-        private void plus_perstotal_Pressed(object sender, EventArgs e)
-        {
-            //perstotal_nr.Text = (Convert.ToDouble(perstotal_nr.Text) + 0.5).ToString();
-            plus_pers1_Pressed(this, null); plus_pers2_Pressed(this, null); plus_pers3_Pressed(this, null); plus_pers4_Pressed(this, null); plus_pers5_Pressed(this, null); 
-            plus_pers6_Pressed(this, null); plus_pers7_Pressed(this, null); plus_pers8_Pressed(this, null); plus_pers9_Pressed(this, null); plus_pers10_Pressed(this, null);
-        }
+        //private void plus_perstotal_Pressed(object sender, EventArgs e)
+        //{
+        //    //perstotal_nr.Text = (Convert.ToDouble(perstotal_nr.Text) + 0.5).ToString();
+        //    plus_pers1_Pressed(this, null); plus_pers2_Pressed(this, null); plus_pers3_Pressed(this, null); plus_pers4_Pressed(this, null); plus_pers5_Pressed(this, null); 
+        //    plus_pers6_Pressed(this, null); plus_pers7_Pressed(this, null); plus_pers8_Pressed(this, null); plus_pers9_Pressed(this, null); plus_pers10_Pressed(this, null);
+        //}
 
-        private void reset_perstotal_Pressed(object sender, EventArgs e)
-        {
-            pers1_nr.Text =  pers2_nr.Text =  pers3_nr.Text =  pers4_nr.Text =  pers5_nr.Text =  pers6_nr.Text =  pers7_nr.Text = pers8_nr.Text = pers9_nr.Text =  pers10_nr.Text = "0";
-        }
+        //private void reset_perstotal_Pressed(object sender, EventArgs e)
+        //{
+        //    pers1_nr.Text =  pers2_nr.Text =  pers3_nr.Text =  pers4_nr.Text =  pers5_nr.Text =  pers6_nr.Text =  pers7_nr.Text = pers8_nr.Text = pers9_nr.Text =  pers10_nr.Text = "0";
+        //}
 
 
 
