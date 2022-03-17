@@ -25,19 +25,24 @@ namespace RoGust_Manager
 
         private async Task getAuthAsync()
         {
-            var request = new AuthenticationRequestConfiguration("Fingerprint required", "Please authenticate.");
-            var result = await CrossFingerprint.Current.AuthenticateAsync(request);
-            if (result.Authenticated)
+            if (Vars.EnableFingerprint)
             {
-                ThreadPool.QueueUserWorkItem(o => LoadingThread());
+                var request = new AuthenticationRequestConfiguration("Fingerprint required", "Please authenticate.");
+                var result = await CrossFingerprint.Current.AuthenticateAsync(request);
+                if (result.Authenticated)
+                {
+                    ThreadPool.QueueUserWorkItem(o => LoadingThread());
+                }
+                else
+                {
+                    await DisplayAlert("Eroare!", "Citirea amprentei a fost anulată!\nAplicația se va închide!", "OK");
+                    notOk = true;
+                    Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+
+                }
             }
             else
-            {
-                await DisplayAlert("Eroare!", "Citirea amprentei a fost anulată!\nAplicația se va închide!", "OK");
-                notOk = true;
-                Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
-
-            }
+                ThreadPool.QueueUserWorkItem(o => LoadingThread());
 
         }
 

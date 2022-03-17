@@ -315,7 +315,7 @@ namespace RoGust_Manager
             try
             { 
             if (pal15_nr.Text != null)
-                pal15_res.Text = "(" + (Convert.ToInt32(pal15_nr.Text) * 71).ToString() + " baxuri)";
+                pal15_res.Text = "(" + (Convert.ToInt32(pal15_nr.Text) * 84).ToString() + " baxuri)";
             }
             catch
 
@@ -550,7 +550,7 @@ namespace RoGust_Manager
                 ppet.Text = a.ToString() + b.ToString() + "." + c.ToString();
                 double asd;
                 Double.TryParse(strimg, out asd);
-                asd = Math.Round(asd * 194 / 40.5 * 5, 2);
+                asd = Math.Round(asd * 200 / 41.3 * 5, 2);
                 result_ppetnr.Text = asd.ToString();
                 if(asd >= 1000)
                 {
