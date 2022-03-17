@@ -7,8 +7,8 @@
 			 x:Class="RoGust_Manager.Page1">
 	<xct:TabView TabStripPlacement="Bottom" IsSwipeEnabled="False">
 		
-		<!--#region -OLD FIRST TAB- -->
-		<!--<xct:TabViewItem Text="Conta" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
+		<!--#region -FIRST TAB- -->
+		<xct:TabViewItem Text="Conta" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
 				<ScrollView>
 					<StackLayout>
 						<Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
@@ -19,7 +19,7 @@
 
 						</Grid>
 
-						--><!--<StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
+						<StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
 							<Label x:Name="perscrt1_text" Text="1." WidthRequest="33" FontSize="18" TextColor="#000" VerticalOptions="CenterAndExpand" />
 							<Entry x:Name="pers1_text"   MaxLength="30" WidthRequest="170" Keyboard="Text"/>
 							<Button x:Name="minus_pers1" WidthRequest="40" BorderColor="Black"  Text="-" Pressed="minus_pers1_Pressed" />
@@ -102,7 +102,7 @@
 						<StackLayout Orientation="Horizontal" Margin="10,0,0,0" HeightRequest="39">
 							<Label x:Name="perstotal_text" Text="Total:" WidthRequest="209" FontSize="18" TextColor="#000" VerticalOptions="CenterAndExpand"/>
 							<Button x:Name="minus_perstotal" WidthRequest="40" BorderColor="Black"  Text="-" Pressed="minus_perstotal_Pressed"/>
-							--><!-- THIS IS COMMENT!!--> <!--<Entry x:Name="perstotal_nr" Text="0" MaxLength="5" WidthRequest="42" Keyboard="Numeric" FontSize="13"/>--><!--
+							<!--<Entry x:Name="perstotal_nr" Text="0" MaxLength="5" WidthRequest="42" Keyboard="Numeric" FontSize="13"/>-->
 							<Button x:Name="reset_perstotal" WidthRequest="42" BorderColor="Black"  Text="X" Pressed="reset_perstotal_Pressed"/>
 							<Button x:Name="plus_perstotal" WidthRequest="40" BorderColor="Black" Text="+" Pressed="plus_perstotal_Pressed"/>
 							<ImageButton x:Name="save_persall" Source="save_ico.png" WidthRequest="40" BorderColor="Black" BackgroundColor="Transparent" Aspect="AspectFit"/>
@@ -114,31 +114,13 @@
 						</StackLayout>
 					<StackLayout Orientation="Horizontal" Margin="10,10,10,10">
 						<Button x:Name="upload_json" Text="Trimitere pe server" WidthRequest="170" BorderColor="Black" TextColor="#000" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Pressed="upload_json_Pressed" CornerRadius="20"/>
-					</StackLayout>--><!--
+					</StackLayout>
 				</StackLayout>
 				</ScrollView>
-		</xct:TabViewItem>-->
+		</xct:TabViewItem>
 		<!--#endregion-->
 
-        <!--#region -FIRST TAB- -->
-        <xct:TabViewItem Text="Conta" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
-            <ScrollView>
-                <StackLayout>
-                    <Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
-                        <Grid.RowDefinitions >
-                            <RowDefinition Height="50"/>
-                        </Grid.RowDefinitions>
-                        <Label FontAttributes="Bold" BackgroundColor="#F44336" FontSize="21" TextColor="#FFF" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Ore suplimentare"/>
-
-                    </Grid>
-
-                </StackLayout>
-            </ScrollView>
-        </xct:TabViewItem>
-        <!--#endregion-->
-        
-        
-        <!--#region -SECOND TAB- -->
+		<!--#region -SECOND TAB- -->
 		<xct:TabViewItem Text="Stoc" BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White">
 			<ScrollView>
 			<StackLayout>
