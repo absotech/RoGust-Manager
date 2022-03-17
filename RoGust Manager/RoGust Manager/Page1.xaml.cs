@@ -301,7 +301,7 @@ namespace RoGust_Manager
             try
             {
             if(pal1_nr.Text != null)
-                pal1_res.Text = "(" + (Convert.ToInt32(pal1_nr.Text) *75).ToString() + " baxuri)";
+                pal1_res.Text = "(" + (Convert.ToInt32(pal1_nr.Text) *68).ToString() + " baxuri)";
             }
             catch
 
