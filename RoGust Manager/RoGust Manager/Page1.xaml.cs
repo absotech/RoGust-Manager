@@ -726,9 +726,15 @@ namespace RoGust_Manager
             });
         }
 
+        private void raport_pontaj_Pressed(object sender, EventArgs e)
+        {
+            Browser.OpenAsync(Vars.getpontaj, BrowserLaunchMode.SystemPreferred);
 
+        }
 
 
         #endregion
+
+
     }
 }

@@ -7,7 +7,7 @@ namespace RoGust_Manager
     {
         internal static bool EnableFingerprint = false;
         internal static string Code = "7833";
-        internal static double Version = 2.46;
+        internal static double Version = 2.48;
         internal static double GotVersion = 0;
 
         #region Website
@@ -17,6 +17,7 @@ namespace RoGust_Manager
         internal static string uploadstocweb = "http://ivanconnections.com/data/app/rogust/ulstoc.php";
         internal static string getstoc = "http://ivanconnections.com/data/app/rogust/getstoc.php";
         
+        internal static string getpontaj = "http://ivanconnections.com/data/app/rogust/pontajcurent.php";
 
         internal static string getcurrent = "http://ivanconnections.com/data/app/rogust/getcurrent.php";
         internal static string genmsg = "http://ivanconnections.com/data/app/rogust/getmessage.php";

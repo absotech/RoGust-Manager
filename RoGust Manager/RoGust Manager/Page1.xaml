@@ -180,23 +180,23 @@
 				</Grid>
 				<StackLayout Orientation="Horizontal" Margin="10,0,0,10">
 					<Label FontSize="20" TextColor="#000" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Bazine" WidthRequest="80"/>
-					<Entry x:Name="bazine_nr" Text="0" MaxLength="2" WidthRequest="35" Keyboard="Numeric" TextChanged="bazine_nr_TextChanged"/>
-                    <Label x:Name="bazine_res" FontSize="20" TextColor="#000" VerticalTextAlignment="Center" Text=" tone"/>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal" Margin="10,0,0,10">
-					<Label FontSize="20" TextColor="#000" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Pal 1L" WidthRequest="80"/>
-					<Entry x:Name="pal1_nr" Text="0" MaxLength="2" WidthRequest="35" Keyboard="Numeric" TextChanged="pal1_nr_TextChanged"/>
-					 <Label x:Name="pal1_res" FontSize="20" TextColor="#000" VerticalTextAlignment="Center" Text="( baxuri)"/>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal" Margin="10,0,0,10">
-					<Label FontSize="20" TextColor="#000" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Pal 1.5L" WidthRequest="80"/>
-					<Entry x:Name="pal15_nr" Text="0" MaxLength="2" WidthRequest="35" Keyboard="Numeric" TextChanged="pal15_nr_TextChanged"/>
-                    <Label x:Name="pal15_res" FontSize="20" TextColor="#000" VerticalTextAlignment="Center" Text="( baxuri)"/>
-				</StackLayout>
-				<StackLayout Orientation="Horizontal" Margin="10,0,0,10">
-					<Label FontSize="20" TextColor="#000" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Cutii" WidthRequest="80"/>
-					<Entry x:Name="cutii_nrstoc" Text="0" MaxLength="2" WidthRequest="35" Keyboard="Numeric" TextChanged="cutii_nrstoc_TextChanged"/>
-                    <Label x:Name="cutii_res" FontSize="20" TextColor="#000" VerticalTextAlignment="Center" Text="( cutii)"/>
+                        <Entry x:Name="bazine_nr" Text="0" MaxLength="4" WidthRequest="55" Keyboard="Numeric" TextChanged="bazine_nr_TextChanged"/>
+                        <Label x:Name="bazine_res" FontSize="20" TextColor="#000" VerticalTextAlignment="Center" Text=" tone"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,10">
+                        <Label FontSize="20" TextColor="#000" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Pal 1L" WidthRequest="80"/>
+                        <Entry x:Name="pal1_nr" Text="0" MaxLength="4" WidthRequest="55" Keyboard="Numeric" TextChanged="pal1_nr_TextChanged"/>
+                        <Label x:Name="pal1_res" FontSize="20" TextColor="#000" VerticalTextAlignment="Center" Text="( baxuri)"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,10">
+                        <Label FontSize="20" TextColor="#000" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Pal 1.5L" WidthRequest="80"/>
+                        <Entry x:Name="pal15_nr" Text="0" MaxLength="4" WidthRequest="55" Keyboard="Numeric" TextChanged="pal15_nr_TextChanged"/>
+                        <Label x:Name="pal15_res" FontSize="20" TextColor="#000" VerticalTextAlignment="Center" Text="( baxuri)"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,10">
+                        <Label FontSize="20" TextColor="#000" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Text="Cutii" WidthRequest="80"/>
+                        <Entry x:Name="cutii_nrstoc" Text="0" MaxLength="4" WidthRequest="55" Keyboard="Numeric" TextChanged="cutii_nrstoc_TextChanged"/>
+                        <Label x:Name="cutii_res" FontSize="20" TextColor="#000" VerticalTextAlignment="Center" Text="( cutii)"/>
 				</StackLayout>
 				<Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
 					<Grid.RowDefinitions >
@@ -348,10 +348,19 @@
 					<Button x:Name="generate_report20" BorderColor="Black" FontSize="13"  Text="Generare raport 20.5" HorizontalOptions="StartAndExpand" Pressed="generate_report20_Pressed" CornerRadius="20"/>
 					<Button x:Name="generate_report30" BorderColor="Black" FontSize="13" Text="Generare raport 30.5" HorizontalOptions="EndAndExpand" Pressed="generate_report30_Pressed" CornerRadius="20"/>
 					</StackLayout>
-					<StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+					<StackLayout Orientation="Horizontal" Margin="10,0,0,20">
 					<Button x:Name="generate_report" BorderColor="Black"  Text="Generare raport" IsEnabled="True" HorizontalOptions="CenterAndExpand" Pressed="generate_report_Pressed" CornerRadius="20"/>
 					</StackLayout>
-				</StackLayout>
+                <Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="25"/>
+                    </Grid.RowDefinitions>
+                    <Label FontAttributes="Bold" FontSize="20" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Pontaj"/>
+                </Grid>
+                <StackLayout Orientation="Horizontal" Margin="10,0,0,20">
+                    <Button x:Name="raport_pontaj" BorderColor="Black"  Text="Raport pontaj" IsEnabled="True" HorizontalOptions="CenterAndExpand" CornerRadius="20" Pressed="raport_pontaj_Pressed"/>
+                </StackLayout>
+            </StackLayout>
 		</xct:TabViewItem>
 
 		<!--#endregion-->
