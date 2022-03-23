@@ -208,6 +208,8 @@ namespace RoGust_Manager
 
         }
 
+        
+
         internal static string GenerareRaport(string week, string tip, string lines)
         {
             try

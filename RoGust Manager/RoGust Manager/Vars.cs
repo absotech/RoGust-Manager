@@ -18,6 +18,7 @@ namespace RoGust_Manager
         internal static string getstoc = "http://ivanconnections.com/data/app/rogust/getstoc.php";
         
         internal static string getpontaj = "http://ivanconnections.com/data/app/rogust/pontajcurent.php";
+        internal static string pontajrap = "http://ivanconnections.com/data/app/rogust/pontajrap.php";
 
         internal static string getcurrent = "http://ivanconnections.com/data/app/rogust/getcurrent.php";
         internal static string genmsg = "http://ivanconnections.com/data/app/rogust/getmessage.php";

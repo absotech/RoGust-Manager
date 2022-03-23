@@ -732,6 +732,15 @@ namespace RoGust_Manager
 
         }
 
+        private void raport_pontaj_wk_Pressed(object sender, EventArgs e)
+        {
+            string tmppj = Dep.DownloadData(Vars.pontajrap);
+            Share.RequestAsync(new ShareTextRequest
+            {
+                Text = tmppj,
+                Title = "Raport Pontaj săptămâna " + GetWeekNumber().ToString()
+            });
+        }
 
         #endregion
 

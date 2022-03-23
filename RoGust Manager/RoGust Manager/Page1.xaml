@@ -308,6 +308,7 @@
 		
 		<!--#region -FORTH TAB -->
 		<xct:TabViewItem x:Name="SetariTab" Text="Rapoarte"  BackgroundColor="#F44336" TextColor="Black"  TextColorSelected="White" TabTapped="SetariTab_TabTapped">
+            <ScrollView>
 				<StackLayout>
 					<Grid ColumnSpacing="0" RowSpacing="0" BackgroundColor="Yellow" Margin="0">
 						<Grid.RowDefinitions >
@@ -357,11 +358,13 @@
                     </Grid.RowDefinitions>
                     <Label FontAttributes="Bold" FontSize="20" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Pontaj"/>
                 </Grid>
-                <StackLayout Orientation="Horizontal" Margin="10,0,0,20">
-                    <Button x:Name="raport_pontaj" BorderColor="Black"  Text="Raport pontaj" IsEnabled="True" HorizontalOptions="CenterAndExpand" CornerRadius="20" Pressed="raport_pontaj_Pressed"/>
+                <StackLayout Orientation="Vertical" Margin="10,0,0,20">
+                    <Button x:Name="raport_pontaj" BorderColor="Black"  Text="Raport pontaj ziua curenta" IsEnabled="True" HorizontalOptions="CenterAndExpand" CornerRadius="20" Pressed="raport_pontaj_Pressed" Margin="10,10,10,10"/>
+                    <Button x:Name="raport_pontaj_wk" BorderColor="Black"  Text="Raport pontaj saptamanal" IsEnabled="True" HorizontalOptions="CenterAndExpand" CornerRadius="20" Pressed="raport_pontaj_wk_Pressed"/>
                 </StackLayout>
             </StackLayout>
-		</xct:TabViewItem>
+            </ScrollView>
+        </xct:TabViewItem>
 
 		<!--#endregion-->
 		
