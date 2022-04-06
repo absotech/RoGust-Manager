@@ -7,7 +7,7 @@ namespace RoGust_Manager
     {
         internal static bool EnableFingerprint = false;
         internal static string Code = "7833";
-        internal static double Version = 2.49;
+        internal static double Version = 2.51;
         internal static double GotVersion = 0;
 
         #region Website
