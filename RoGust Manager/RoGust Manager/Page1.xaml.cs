@@ -301,7 +301,7 @@ namespace RoGust_Manager
             try
             {
             if(pal1_nr.Text != null)
-                pal1_res.Text = "(" + (Convert.ToInt32(pal1_nr.Text) *68).ToString() + " baxuri)";
+                pal1_res.Text = "(" + Math.Round(Convert.ToDouble(pal1_nr.Text) *68, 2).ToString() + " baxuri)";
             }
             catch
 
@@ -315,7 +315,7 @@ namespace RoGust_Manager
             try
             { 
             if (pal15_nr.Text != null)
-                pal15_res.Text = "(" + (Convert.ToInt32(pal15_nr.Text) * 84).ToString() + " baxuri)";
+                pal15_res.Text = "(" + Math.Round(Convert.ToDouble(pal15_nr.Text) * 84, 2).ToString() + " baxuri)";
             }
             catch
 
@@ -329,7 +329,7 @@ namespace RoGust_Manager
             try
             {
                 if (cutii_nrstoc.Text != null)
-                    cutii_res.Text = "(" + (Convert.ToInt32(cutii_nrstoc.Text) * 60).ToString() + " baxuri)";
+                    cutii_res.Text = "(" + Math.Round(Convert.ToDouble(cutii_nrstoc.Text) * 60, 2).ToString() + " baxuri)";
             }
             catch
 
