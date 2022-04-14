@@ -25,6 +25,20 @@ namespace RoGust_Manager
 
         private async Task getAuthAsync()
         {
+
+            string namefp = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/fingerprint";
+            if (!File.Exists(namefp))
+            {
+                File.WriteAllText(namefp, "false");
+            }
+            else
+            {
+                if (File.ReadAllText(namefp) == "true")
+                    Vars.EnableFingerprint = true;
+                else
+                    Vars.EnableFingerprint = false;
+            }
+
             if (Vars.EnableFingerprint)
             {
                 var request = new AuthenticationRequestConfiguration("Fingerprint required", "Please authenticate.");
@@ -58,7 +72,19 @@ namespace RoGust_Manager
             Device.BeginInvokeOnMainThread(() => curop.Text = "Descărcare informații fiole");
             if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc"))
                 Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/stoc");
-            string name = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/person.json";
+            string namefp = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/fingerprint";
+            if (!File.Exists(namefp))
+            {
+                File.WriteAllText(namefp, "false");
+            }
+            else
+            {
+                if(File.ReadAllText(namefp) == "true")
+                    Vars.EnableFingerprint = true;
+                else
+                    Vars.EnableFingerprint = false;
+            }
+            string name = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/fingerprint";
             if (!File.Exists(name))
             {
                 File.WriteAllText(name, Dep.DescarcarePersoane("new"));

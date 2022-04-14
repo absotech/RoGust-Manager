@@ -576,6 +576,10 @@ namespace RoGust_Manager
         {
             current_week.Text = "Săptămâna curentă:" + GetWeekNumber().ToString();
             week_to_generate.Text = GetWeekNumber().ToString();
+            if (Vars.EnableFingerprint)
+                set_fingerprint.IsChecked = true;
+            else
+                set_fingerprint.IsChecked= false;
         }
 
         private void generate_report20_Pressed(object sender, EventArgs e)
@@ -742,8 +746,21 @@ namespace RoGust_Manager
             });
         }
 
-        #endregion
+        private void set_fingerprint_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            if (set_fingerprint.IsChecked)
+            {
+                string namefp = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/fingerprint";
+                File.WriteAllText(namefp, "true");
+            }
+            else
+            {
+                string namefp = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/fingerprint";
+                File.WriteAllText(namefp, "false");
+            }
+        }
 
+        #endregion
 
     }
 }

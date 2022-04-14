@@ -362,7 +362,17 @@
                     <Button x:Name="raport_pontaj" BorderColor="Black"  Text="Raport pontaj ziua curenta" IsEnabled="True" HorizontalOptions="CenterAndExpand" CornerRadius="20" Pressed="raport_pontaj_Pressed" Margin="10,10,10,10"/>
                     <Button x:Name="raport_pontaj_wk" BorderColor="Black"  Text="Raport pontaj saptamanal" IsEnabled="True" HorizontalOptions="CenterAndExpand" CornerRadius="20" Pressed="raport_pontaj_wk_Pressed"/>
                 </StackLayout>
-            </StackLayout>
+                    <Grid ColumnSpacing="0" RowSpacing="0" Margin="0">
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+                        <Label FontAttributes="Bold" FontSize="20" TextColor="#000" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Setări aplicație"/>
+                    </Grid>
+                    <StackLayout Orientation="Horizontal" Margin="10,0,0,20">
+                        <CheckBox x:Name="set_fingerprint"  IsEnabled="True"  Margin="10,10,10,10" VerticalOptions="CenterAndExpand" CheckedChanged="set_fingerprint_CheckedChanged"/>
+                        <Label  Text="Activare amprentă" TextColor="#000" FontSize="18" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </StackLayout>
             </ScrollView>
         </xct:TabViewItem>
 
